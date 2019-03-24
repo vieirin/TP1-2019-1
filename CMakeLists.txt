@@ -7,7 +7,7 @@ project (PassManager)
 set (SOURCE_DIR src)
 set (INCLUDE_DIR include)
 
-set (DOMAINS_HEADER_FILES ${INCLUDE_DIR}/domains/EventCode.hpp)
+file (GLOB_RECURSE DOMAINS_HEADER_FILES ${SOURCE_DIR}/domains/*.hpp)
 file (GLOB_RECURSE DOMAINS_SOURCE_FILES ${SOURCE_DIR}/domains/*.cpp)
 
 # Executable name
@@ -18,10 +18,13 @@ target_include_directories(PassManager PUBLIC ${INCLUDE_DIR})
 
 enable_testing()
 find_package(GTest REQUIRED)
+file (GLOB_RECURSE TEST_SOURCE_FILES ${SOURCE_DIR}/domains/tests/*.cpp)
+file (GLOB_RECURSE TEST_HEADER_FILES ${INCLUDE_DIR}/domains/tests/*.hpp)
 
-add_executable(DomainTest ${SOURCE_DIR}/domains/tests/EventCode_test.cpp
+add_executable(DomainTest ${TEST_SOURCE_FILES}
                           ${DOMAINS_HEADER_FILES}
                           ${DOMAINS_SOURCE_FILES}
+                          ${TEST_HEADER_FILES}
 )
 target_include_directories(DomainTest PUBLIC ${INCLUDE_DIR})
 target_link_libraries(DomainTest GTest::GTest GTest::Main)

@@ -50,5 +50,6 @@
         "__config": "cpp",
         "__nullptr": "cpp"
     },
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Disabled",
+    "editor.formatOnSave": true,
 }

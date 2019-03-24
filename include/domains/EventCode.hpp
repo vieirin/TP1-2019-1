@@ -11,6 +11,7 @@ class EventCode
     std::string code;
   public:
     EventCode(std::string code);
+    void setCode(std::string code);
 };
 
 

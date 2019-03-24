@@ -2,6 +2,10 @@
 
 EventCode::EventCode(std::string code)
 {
+    setCode(code);
+}
+
+void EventCode::setCode(std::string code) {
     std::regex code_regex("([0-9])\\w{2}");
     std::smatch match;
 
@@ -10,5 +14,4 @@ EventCode::EventCode(std::string code)
     } else {
         throw std::invalid_argument("Event code must be like XXX");
     }
-
 }
