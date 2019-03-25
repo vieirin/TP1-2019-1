@@ -9,7 +9,8 @@ set (INCLUDE_DIR include)
 
 file (GLOB_RECURSE DOMAINS_HEADER_FILES ${SOURCE_DIR}/domains/*.hpp)
 set (DOMAINS_SOURCE_FILES ${SOURCE_DIR}/domains/EventCode.cpp
-                          ${SOURCE_DIR}/domains/PresentationCode.cpp)
+                          ${SOURCE_DIR}/domains/PresentationCode.cpp
+                          ${SOURCE_DIR}/domains/EventName.cpp)
 
 # Executable name
 add_executable (PassManager ${SOURCE_DIR}/main.cpp
