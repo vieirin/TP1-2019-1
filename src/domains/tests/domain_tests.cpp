@@ -4,6 +4,7 @@
 #include <domains/tests/PassportCode_test.hpp>
 #include <domains/tests/EventName_test.hpp>
 #include <domains/tests/Price_test.hpp>
+#include <domains/tests/Room_test.hpp>
 
 int main(int argc, char **argv)
 {

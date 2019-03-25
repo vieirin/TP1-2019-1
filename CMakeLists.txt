@@ -11,7 +11,8 @@ file (GLOB_RECURSE DOMAINS_HEADER_FILES ${SOURCE_DIR}/domains/*.hpp)
 set (DOMAINS_SOURCE_FILES ${SOURCE_DIR}/domains/EventCode.cpp
                           ${SOURCE_DIR}/domains/PresentationCode.cpp
                           ${SOURCE_DIR}/domains/EventName.cpp
-                          ${SOURCE_DIR}/domains/Price.cpp)
+                          ${SOURCE_DIR}/domains/Price.cpp
+                          ${SOURCE_DIR}/domains/Room.cpp)
 
 # Executable name
 add_executable (PassManager ${SOURCE_DIR}/main.cpp
