@@ -1,3 +1,4 @@
+#include <gtest/gtest.h>
 #include <domains/EventCode.hpp>
 #include <stdexcept>
 #include <string>

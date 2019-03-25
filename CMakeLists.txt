@@ -8,11 +8,13 @@ set (SOURCE_DIR src)
 set (INCLUDE_DIR include)
 
 file (GLOB_RECURSE DOMAINS_HEADER_FILES ${SOURCE_DIR}/domains/*.hpp)
-file (GLOB_RECURSE DOMAINS_SOURCE_FILES ${SOURCE_DIR}/domains/*.cpp)
+set (DOMAINS_SOURCE_FILES ${SOURCE_DIR}/domains/EventCode.cpp
+                          ${SOURCE_DIR}/domains/PresentationCode.cpp)
 
 # Executable name
 add_executable (PassManager ${SOURCE_DIR}/main.cpp
-                            ${SOURCE_DIR}/domains/EventCode.cpp)
+                            ${DOMAINS_SOURCE_FILES}
+)
 target_include_directories(PassManager PUBLIC ${INCLUDE_DIR})
 
 
@@ -26,6 +28,6 @@ add_executable(DomainTest ${TEST_SOURCE_FILES}
                           ${DOMAINS_SOURCE_FILES}
                           ${TEST_HEADER_FILES}
 )
+add_test(AllTestsInDomain DomainTest)
 target_include_directories(DomainTest PUBLIC ${INCLUDE_DIR})
 target_link_libraries(DomainTest GTest::GTest GTest::Main)
-add_test(AllTestsInDomain DomainTest)
