@@ -1,12 +1,10 @@
 #include <domains/PresentationCode.hpp>
 
-PresentationCode::PresentationCode(std::string presCode)
-{
+PresentationCode::PresentationCode(std::string presCode) {
     setPresentationCode(presCode);
 }
 
-void PresentationCode::setPresentationCode(std::string presCode)
-{
+void PresentationCode::setPresentationCode(std::string presCode) {
     std::regex code_regex("([0-9])\\w{3}");
     std::smatch match;
 

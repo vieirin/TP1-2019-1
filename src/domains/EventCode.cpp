@@ -1,9 +1,6 @@
 #include <domains/EventCode.hpp>
 
-EventCode::EventCode(std::string code)
-{
-    setCode(code);
-}
+EventCode::EventCode(std::string code) { setCode(code); }
 
 void EventCode::setCode(std::string code) {
     std::regex code_regex("([0-9])\\w{2}");

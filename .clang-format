@@ -1,0 +1,9 @@
+AccessModifierOffset: -2
+IndentWidth: 4
+AlignTrailingComments: true
+AlignTrailingComments: true
+Language: Cpp
+Standard: Cpp11
+UseTab: Never
+TabWidth: 4
+PenaltyBreakString: 100

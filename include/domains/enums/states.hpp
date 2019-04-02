@@ -27,5 +27,5 @@ enum state
     SC,
     SP,
     SE,
-    TO
+    T0,
 }

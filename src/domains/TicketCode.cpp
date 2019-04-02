@@ -1,11 +1,8 @@
-#include <domains/PassportCode.hpp>
+#include <domains/TicketCode.hpp>
 
-PassportCode::PassportCode(std::string passCode)
-{
-    setCode(passCode);
-}
+TicketCode::TicketCode(std::string passCode) { setCode(passCode); }
 
-PassportCode::setCode(std::string code) {
+void TicketCode::setCode(std::string code) {
     std::regex code_regex("([0-9])\\w{4}");
     std::smatch match;
 
@@ -15,4 +12,3 @@ PassportCode::setCode(std::string code) {
         throw std::invalid_argument("Event code must be like XXX");
     }
 }
-
