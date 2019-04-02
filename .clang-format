@@ -6,4 +6,6 @@ Language: Cpp
 Standard: Cpp11
 UseTab: Never
 TabWidth: 4
-PenaltyBreakString: 100
+PenaltyBreakString: 400
+AlignConsecutiveAssignments: true
+AllowAllParametersOfDeclarationOnNextLine: false

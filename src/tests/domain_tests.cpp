@@ -1,3 +1,4 @@
+#include <domains/tests/AgeGroup_test.hpp>
 #include <domains/tests/Availability_test.hpp>
 #include <domains/tests/EventCode_test.hpp>
 #include <domains/tests/EventName_test.hpp>
