@@ -1,16 +1,16 @@
 #ifndef _EventType_H_
 #define _EventType_H_
 
-#include <unordered_map>
 #include <string>
+#include <unordered_map>
 
-class EventType
-{
-private:
-  std::unordered_map<int, std::string> evType;
+class EventType {
+  private:
+    std::unordered_map<std::string, int> evType;
+    int type;
 
-public:
-  EventType();
+  public:
+    EventType(std::string type);
 };
 
 #endif
