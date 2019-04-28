@@ -13,8 +13,8 @@ class City {
     // bool leapYear;
 
   public:
-    City(std::string City);
-    void setCity(std::string City);
+    City(std::string city);
+    void setCity(std::string city);
     std::string getCity();
 };
 

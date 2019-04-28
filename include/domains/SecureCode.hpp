@@ -9,12 +9,12 @@
 
 class SecureCode {
   private:
-    std::string SecureCode;
+    std::string code;
     // bool leapYear;
 
   public:
-    SecureCode(std::string SecureCode);
-    void setSecureCode(std::string SecureCode);
+    SecureCode(std::string code);
+    void setSecureCode(std::string code);
     std::string getSecureCode();
 };
 

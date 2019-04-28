@@ -9,12 +9,12 @@
 
 class StartTime {
   private:
-    std::string StartTime;
+    std::string time;
     // bool leapYear;
 
   public:
-    StartTime(std::string StartTime);
-    void setStartTime(std::string StartTime);
+    StartTime(std::string time);
+    void setStartTime(std::string time);
     std::string getStartTime();
 };
 

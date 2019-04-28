@@ -9,12 +9,12 @@
 
 class ValidDate {
   private:
-    std::string ValidDate;
+    std::string date;
     // bool leapYear;
 
   public:
-    ValidDate(std::string ValidDate);
-    void setValidDate(std::string ValidDate);
+    ValidDate(std::string date);
+    void setValidDate(std::string date);
     std::string getValidDate();
 };
 

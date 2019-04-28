@@ -9,12 +9,12 @@
 
 class State {
   private:
-    std::string State;
+    std::string state;
     // bool leapYear;
 
   public:
-    State(std::string State);
-    void setState(std::string State);
+    State(std::string state);
+    void setState(std::string state);
     std::string getState();
 };
 

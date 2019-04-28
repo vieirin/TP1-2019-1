@@ -9,12 +9,12 @@
 
 class CreditCard {
   private:
-    std::string CreditCard;
+    std::string number;
     // bool leapYear;
 
   public:
-    CreditCard(std::string CreditCard);
-    void setCreditCard(std::string CreditCard);
+    CreditCard(std::string number);
+    void setCreditCard(std::string number);
     std::string getCreditCard();
 };
 
