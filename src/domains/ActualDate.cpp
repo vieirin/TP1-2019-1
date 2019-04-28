@@ -42,13 +42,13 @@ void ActualDate::setActualDate(std::string date) {
         }
         if (mes == 1 && mes == 3 && mes == 5 && mes == 7 && mes == 8 &&
             mes == 10 && mes == 12) {
-            if (dia <= 31) {
+            if (dia <= 31 && dia > 0) {
                 this->date = date;
             } else {
                 throw std::invalid_argument("Day field invalid!");
             }
         } else {
-            if (dia <= 30) {
+            if (dia <= 30 && dia > 0) {
                 this->date = date;
             } else {
                 throw std::invalid_argument("Day field invalid!");
@@ -58,4 +58,3 @@ void ActualDate::setActualDate(std::string date) {
         throw std::invalid_argument("Wrong input format -> DD/MM/AA");
     }
 }
-
