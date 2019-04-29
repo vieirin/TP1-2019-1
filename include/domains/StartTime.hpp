@@ -14,7 +14,7 @@ class StartTime {
 
   public:
     StartTime(std::string time);
-    void setStartTime(std::string time);
+    void setStartTime(std::string startTime);
     std::string getStartTime();
 };
 
