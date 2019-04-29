@@ -1,0 +1,26 @@
+var annotated_dup =
+[
+    [ "AgeGroup", "class_age_group.html", "class_age_group" ],
+    [ "Availability", "class_availability.html", "class_availability" ],
+    [ "Card", "class_card.html", "class_card" ],
+    [ "City", "class_city.html", "class_city" ],
+    [ "CPF", "class_c_p_f.html", "class_c_p_f" ],
+    [ "CreditCard", "class_credit_card.html", "class_credit_card" ],
+    [ "CurrentDate", "class_current_date.html", "class_current_date" ],
+    [ "Event", "class_event.html", "class_event" ],
+    [ "EventCode", "class_event_code.html", "class_event_code" ],
+    [ "EventName", "class_event_name.html", "class_event_name" ],
+    [ "EventType", "class_event_type.html", "class_event_type" ],
+    [ "Password", "class_password.html", "class_password" ],
+    [ "Presentation", "class_presentation.html", "class_presentation" ],
+    [ "PresentationCode", "class_presentation_code.html", "class_presentation_code" ],
+    [ "Price", "class_price.html", "class_price" ],
+    [ "Room", "class_room.html", "class_room" ],
+    [ "SecureCode", "class_secure_code.html", "class_secure_code" ],
+    [ "StartTime", "class_start_time.html", "class_start_time" ],
+    [ "State", "class_state.html", "class_state" ],
+    [ "Ticket", "class_ticket.html", "class_ticket" ],
+    [ "TicketCode", "class_ticket_code.html", "class_ticket_code" ],
+    [ "User", "class_user.html", "class_user" ],
+    [ "ValidDate", "class_valid_date.html", "class_valid_date" ]
+];
