@@ -1,10 +1,9 @@
 #include <domains/EventType.hpp>
 
-EventType::EventType()
-{
-    evType = std::unordered_map<int, std::string>{
-        {1, "TEATRO"},
-        {2, "ESPORTE"},
-        {3, "SHOW NACIONAL"},
-        {4, "SHOW INTERNACIONAL"}};
+EventType::EventType(std::string typeName) {
+    evType = std::unordered_map<std::string, int>{{"TEATRO", 1},
+                                                  {"ESPORTE", 2},
+                                                  {"SHOW NACIONAL", 3},
+                                                  {"SHOW INTERNACIONAL", 4}};
+    type   = evType[typeName];
 }

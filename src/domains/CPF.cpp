@@ -3,7 +3,7 @@
 CPF::CPF(std::string cpf) { setCPF(cpf); }
 
 void CPF::setCPF(std::string cpf) {
-    auto cpfexpr = std::regex("[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}");
+    auto cpfexpr = std::regex("[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}");
     if (!std::regex_match(cpf, cpfexpr)) {
         throw std::invalid_argument("CPF must match XXX.XXX.XXX-XX pattern");
     }
@@ -35,7 +35,7 @@ bool CPF::isFirstDigitValid(std::string cpf) {
     int multiplier = 10;
     int sum        = 0;
     for (auto digit : numericSlice) {
-        auto intDigit = std::atoi(digit);
+        auto intDigit = std::atoi(&digit);
         sum += intDigit * multiplier;
         multiplier--;
     }
@@ -54,7 +54,7 @@ bool CPF::isSecondDigitValid(std::string cpf) {
             "Verification digits must be separated by '-' from numbers");
 
     // Once '-' position is found we can remove it
-    cpfOnlyNumber.erase(std::remove(cpf.begin(), cpf.end(), '-'), cpf.end());
+    cpf.erase(std::remove(cpf.begin(), cpf.end(), '-'), cpf.end());
 
     auto numericSlice            = cpf.substr(0, separator);
     auto secondVerificationDigit = cpf.substr(separator++)[1];
@@ -62,7 +62,7 @@ bool CPF::isSecondDigitValid(std::string cpf) {
     int multiplier = 11;
     int sum        = 0;
     for (auto digit : cpf) {
-        auto intDigit = std::atoi(digit);
+        auto intDigit = std::atoi(&digit);
         sum += intDigit * multiplier;
         multiplier--;
     }
