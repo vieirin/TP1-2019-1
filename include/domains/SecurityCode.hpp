@@ -1,5 +1,5 @@
-#ifndef _SecureCode_H_
-#define _SecureCode_H_
+#ifndef _SecurityCode_H_
+#define _SecurityCode_H_
 #include <algorithm>
 #include <iostream>
 #include <regex>
@@ -7,15 +7,15 @@
 #include <string>
 #include <vector>
 
-class SecureCode {
+class SecurityCode {
   private:
     std::string code;
     // bool leapYear;
 
   public:
-    SecureCode(std::string code);
-    void setSecureCode(std::string code);
-    std::string getSecureCode();
+    SecurityCode(std::string code);
+    void setSecurityCode(std::string code);
+    std::string getSecurityCode();
 };
 
 #endif
