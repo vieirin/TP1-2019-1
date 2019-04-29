@@ -1,5 +1,5 @@
-#ifndef _ActualDate_H_
-#define _ActualDate_H_
+#ifndef _CurrentDate_H_
+#define _CurrentDate_H_
 #include <algorithm>
 #include <iostream>
 #include <regex>
@@ -7,15 +7,15 @@
 #include <string>
 #include <vector>
 
-class ActualDate {
+class CurrentDate {
   private:
     std::string date;
     bool leapYear;
 
   public:
-    ActualDate(std::string date);
-    void setActualDate(std::string date);
-    std::string getActualDate();
+    CurrentDate(std::string date);
+    void setCurrentDate(std::string date);
+    std::string getCurrentDate();
 };
 
 #endif
