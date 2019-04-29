@@ -10,7 +10,7 @@ class User {
     Password passwd;
 
   public:
-    User(std::string cpf, std::string pwd);
+    User(std::string cpfNumber, std::string pwd);
 };
 
 #endif

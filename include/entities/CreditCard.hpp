@@ -1,15 +1,14 @@
 #ifndef _CREDITCARD_H_
 #define _CREDITCARD_H_
 
+#include <domains/Card.hpp>
+
 class CreditCard {
   private:
-    public:
-    CreditCard(/* args */);
-    ~CreditCard();
+    Card card;
+
+  public:
+    CreditCard(std::string cardNumber);
 };
-
-CreditCard::CreditCard(/* args */) {}
-
-CreditCard::~CreditCard() {}
 
 #endif

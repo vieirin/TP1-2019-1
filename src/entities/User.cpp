@@ -1,6 +1,6 @@
 #include <entities/User.hpp>
 
-User::User(std::string cpf, std::string pwd) {
-    this->cpf = CPF(cpf);
-    passwd    = Password(pwd)
+User::User(std::string cpfNumber, std::string pwd) {
+    cpf    = CPF(cpfNumber);
+    passwd = Password(pwd)
 }
