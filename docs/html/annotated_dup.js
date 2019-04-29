@@ -16,7 +16,7 @@ var annotated_dup =
     [ "PresentationCode", "class_presentation_code.html", "class_presentation_code" ],
     [ "Price", "class_price.html", "class_price" ],
     [ "Room", "class_room.html", "class_room" ],
-    [ "SecureCode", "class_secure_code.html", "class_secure_code" ],
+    [ "SecurityCode", "class_security_code.html", "class_security_code" ],
     [ "StartTime", "class_start_time.html", "class_start_time" ],
     [ "State", "class_state.html", "class_state" ],
     [ "Ticket", "class_ticket.html", "class_ticket" ],

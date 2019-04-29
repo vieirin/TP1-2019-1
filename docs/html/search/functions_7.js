@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['securecode',['SecureCode',['../class_secure_code.html#a438ca6fb3765c40022c9ae20d76040b3',1,'SecureCode']]],
+  ['securitycode',['SecurityCode',['../class_security_code.html#acd92cad70c65fca9cad5d62e79474180',1,'SecurityCode']]],
   ['setavailability',['setAvailability',['../class_availability.html#a315634988dad6624afc1330bc77e08ae',1,'Availability']]],
   ['setcard',['setCard',['../class_card.html#a97571980a043fd28f4a3fc8211d1cae8',1,'Card']]],
   ['setcity',['setCity',['../class_city.html#a9f2a2f59076c2ec2591d3713e8ee29c5',1,'City']]],
@@ -12,7 +12,7 @@ var searchData=
   ['setpresentationcode',['setPresentationCode',['../class_presentation_code.html#a867e2a8c5da78c3eaabb9ed8918f9521',1,'PresentationCode']]],
   ['setprice',['setPrice',['../class_price.html#a66ba29e9ab95f10b5d21b171317045c3',1,'Price']]],
   ['setroom',['setRoom',['../class_room.html#ae1645c6cc522f4b1c0ba980736cb440d',1,'Room']]],
-  ['setsecurecode',['setSecureCode',['../class_secure_code.html#a7417a7fff51641cd8e5f829af6af7eea',1,'SecureCode']]],
+  ['setsecuritycode',['setSecurityCode',['../class_security_code.html#a027077edcff7484b53def6ba4d94af01',1,'SecurityCode']]],
   ['setstarttime',['setStartTime',['../class_start_time.html#ad6692d66a7c97d3a58f6d7b5b56880bc',1,'StartTime']]],
   ['setstate',['setState',['../class_state.html#ad267a860927ae9032e808d06d5fc9d30',1,'State']]],
   ['setvaliddate',['setValidDate',['../class_valid_date.html#a28905a1bdaa71556225b7e565735364c',1,'ValidDate']]],

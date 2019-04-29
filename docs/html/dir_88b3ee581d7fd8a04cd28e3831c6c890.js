@@ -41,8 +41,8 @@ var dir_88b3ee581d7fd8a04cd28e3831c6c890 =
     [ "Room.hpp", "_room_8hpp.html", [
       [ "Room", "class_room.html", "class_room" ]
     ] ],
-    [ "SecureCode.hpp", "_secure_code_8hpp.html", [
-      [ "SecureCode", "class_secure_code.html", "class_secure_code" ]
+    [ "SecurityCode.hpp", "_security_code_8hpp.html", [
+      [ "SecurityCode", "class_security_code.html", "class_security_code" ]
     ] ],
     [ "StartTime.hpp", "_start_time_8hpp.html", [
       [ "StartTime", "class_start_time.html", "class_start_time" ]

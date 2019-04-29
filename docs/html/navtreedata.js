@@ -50,7 +50,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_age_group_8cpp.html",
-"index.html"
+"globals_vars.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

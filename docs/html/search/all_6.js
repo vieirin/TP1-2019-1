@@ -9,7 +9,7 @@ var searchData=
   ['getpassword',['getPassword',['../class_password.html#aee8284b06e0c79e83030de2cb4d7fa19',1,'Password']]],
   ['getprice',['getPrice',['../class_price.html#af2ec5c04c31c740bb4c4d94c3891ecc2',1,'Price']]],
   ['getroom',['getRoom',['../class_room.html#a1debd51acccea50674c56fd77b9d3f1f',1,'Room']]],
-  ['getsecurecode',['getSecureCode',['../class_secure_code.html#a5ead36d45429c9c84d3b9d03b7aef63b',1,'SecureCode']]],
+  ['getsecuritycode',['getSecurityCode',['../class_security_code.html#aacb04fcdfb3960ebdaa33b7ba518fc83',1,'SecurityCode']]],
   ['getstarttime',['getStartTime',['../class_start_time.html#a0a58ef81a90d0f58a7957e49dfa88684',1,'StartTime']]],
   ['getstate',['getState',['../class_state.html#ad8697cb367f8b1453a1412426fc248ae',1,'State']]],
   ['getvaliddate',['getValidDate',['../class_valid_date.html#af36a9512928582cadeb618e336f7669b',1,'ValidDate']]],
