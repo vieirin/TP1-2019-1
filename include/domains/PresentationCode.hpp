@@ -4,8 +4,8 @@
 #include <regex>
 #include <string>
 
-/* PresentationCode defines a domain class that composes a Presentation, if code
- * is invalid or bad formatted then it throws a invalid_argument exception
+/** PresentationCode defines a domain class that composes a Presentation, if
+ * code is invalid or bad formatted then it throws a invalid_argument exception
  * */
 class PresentationCode {
   private:

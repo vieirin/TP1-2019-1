@@ -4,7 +4,7 @@
 #include <string>
 #include <unordered_map>
 
-/*EventType defines basically a map from a event type name to its value
+/** EventType defines basically a map from a event type name to its value
  * associated
  *
  * Teatro: 1
