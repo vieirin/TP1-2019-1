@@ -1,5 +1,5 @@
-#ifndef _CreditCard_H_
-#define _CreditCard_H_
+#ifndef _Card_H_
+#define _Card_H_
 #include <algorithm>
 #include <iostream>
 #include <regex>
@@ -7,15 +7,15 @@
 #include <string>
 #include <vector>
 
-class CreditCard {
+class Card {
   private:
     std::string number;
     // bool leapYear;
 
   public:
-    CreditCard(std::string number);
-    void setCreditCard(std::string number);
-    std::string getCreditCard();
+    Card(std::string number);
+    void setCard(std::string number);
+    std::string getCard();
 };
 
 #endif
