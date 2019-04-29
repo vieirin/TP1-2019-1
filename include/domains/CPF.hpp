@@ -6,6 +6,9 @@
 #include <stdexcept>
 #include <string>
 
+/*CPF is used to User identification. It must follow CPF rules, such as format
+ * ("XXX.XXX.XXX-XX") and verification digits rules
+ */
 class CPF {
   private:
     std::string cpf;

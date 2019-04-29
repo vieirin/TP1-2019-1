@@ -3,8 +3,10 @@
 
 #include <string>
 
-class EventName
-{
+/* EventName receives a name for an Event and checks in its ctor if is a valid
+ * event name
+ */
+class EventName {
   private:
     std::string name;
 

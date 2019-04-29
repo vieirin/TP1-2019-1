@@ -1,12 +1,15 @@
 #ifndef _Password_H_
 #define _Password_H_
 
-#include <string>
 #include <regex>
 #include <stdexcept>
+#include <string>
 
-class Password
-{
+/*Password is a domain class that defines rules for a User password, it must be
+ * an string with length 6 contaning non-repeated letters, Capital letters,
+ * lowercase letters and a digit
+ */
+class Password {
   private:
     std::string password;
 

@@ -7,6 +7,10 @@
 #include <string>
 #include <vector>
 
+/*Card defines an credit card instance, due to conflicting names with CreditCard
+ * we decided to call the domain just "card" all card number must follow credit
+ * card rules or constructor will throw an invalid argument exception
+ * */
 class Card {
   private:
     std::string number;

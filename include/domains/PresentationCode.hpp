@@ -1,17 +1,19 @@
 #ifndef _PRESENTATION_CODE_H
 #define _PRESENTATION_CODE_H
 
-#include <string>
 #include <regex>
+#include <string>
 
-class PresentationCode
-{
+/* PresentationCode defines a domain class that composes a Presentation, if code
+ * is invalid or bad formatted then it throws a invalid_argument exception
+ * */
+class PresentationCode {
   private:
     std::string code;
+
   public:
     PresentationCode(std::string presCode);
     void setPresentationCode(std::string presCode);
 };
-
 
 #endif

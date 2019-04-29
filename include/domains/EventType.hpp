@@ -4,6 +4,17 @@
 #include <string>
 #include <unordered_map>
 
+/*EventType defines basically a map from a event type name to its value
+ * associated
+ *
+ * Teatro: 1
+ * Esporte: 2
+ * Show Nacional: 3
+ * Show Internacional: 4
+ *
+ * If string is not in this map this function throws an  (TODO decide
+ * expection) __  Exception
+ */
 class EventType {
   private:
     std::unordered_map<std::string, int> evType;
@@ -14,7 +25,3 @@ class EventType {
 };
 
 #endif
-
-/* until now this class does not need tests, once there's just it's constructor
-  unless for some reason you want to check if map was created properly
-*/

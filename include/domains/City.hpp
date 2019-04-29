@@ -7,6 +7,8 @@
 #include <string>
 #include <vector>
 
+/* City defines a city, any bad formatted string throws an invalid argument
+ * exception */
 class City {
   private:
     std::string city;

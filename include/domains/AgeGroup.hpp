@@ -4,6 +4,10 @@
 #include <stdexcept>
 #include <string>
 
+/** Age Group is a class which determines the allowed age group, this domain is
+ * used by Event and Presentation classes
+ *
+ */
 class AgeGroup {
   private:
     std::string group;

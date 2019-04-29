@@ -7,6 +7,9 @@
 #include <string>
 #include <vector>
 
+/* Current date is a domain class used to represent a valid time in formar
+ * DD/MM/AAAA
+ */
 class CurrentDate {
   private:
     std::string date;

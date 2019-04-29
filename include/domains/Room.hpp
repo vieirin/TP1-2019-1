@@ -1,8 +1,9 @@
 #ifndef _Room_H_
 #define _Room_H_
 
-class Room
-{
+/*Room is a domain class refering to room number for a Event or Presentation
+ */
+class Room {
   private:
     int id;
 
