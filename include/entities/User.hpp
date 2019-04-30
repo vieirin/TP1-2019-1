@@ -11,6 +11,7 @@ class User {
     Password *passwd;
 
   public:
+    /** Presentation Constructor takes 2 parameter*/
     User(std::string cpfNumber, std::string pwd);
 };
 

@@ -7,9 +7,9 @@ void CardNumber::setCardNumber(std::string number) {
     std::regex code_regex("[0-9]{16}");
     std::smatch match;
     int sumTotal = 0;
+    /** Regex Format verification*/
     if (std::regex_match(number, match, code_regex)) {
-        // verificaçao do numero de cartao de credito
-        // uso do 1 for para encontrar as posiçoes pares da sequencia do cartao
+        /** loop to implement the luhn alghorithm */
         for (int contador = 0; contador <= 7; contador++) {
             int multiplex      = contador * 2;
             int operando       = std::stoi(number.substr(multiplex, 1));
@@ -26,7 +26,7 @@ void CardNumber::setCardNumber(std::string number) {
                 sumTotal += resultadofase1;
             }
         }
-
+        /** Loop to implement the luhn algorithm */
         for (int contador = 0; contador <= 7; contador++) {
             int operando = 0;
 
@@ -34,14 +34,14 @@ void CardNumber::setCardNumber(std::string number) {
             operando      = std::stoi(number.substr(multiplex, 1));
             sumTotal += operando;
         }
-
+        /** Verify if the number is valid -- End of Luhn algorithm*/
         if (sumTotal % 10 == 0) {
             this->number = number;
         } else {
-            throw std::invalid_argument("Invalid Number");
+            throw std::invalid_argument("Invalid Number (CardNumber)");
         }
 
     } else {
-        throw std::invalid_argument("Invalid format");
+        throw std::invalid_argument("Invalid format (CardNumber)");
     }
 }

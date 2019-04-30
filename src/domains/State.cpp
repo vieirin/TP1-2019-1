@@ -5,6 +5,7 @@ State::State(std::string state) { setState(state); }
 void State::setState(std::string state) {
     std::regex regex_state("^[A-Z]{2}");
     std::smatch match;
+    /** State Validation */
     if (std::regex_match(state, match, regex_state)) {
         if ((state.compare("AC") == 0) || (state.compare("MG") == 0) ||
             (state.compare("AL") == 0) || (state.compare("PA") == 0) ||

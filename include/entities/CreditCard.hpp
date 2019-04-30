@@ -12,6 +12,12 @@ class CreditCard {
     ValidDate *expirationDate;
 
   public:
+    /** Presentation Constructor takes 6 parameters:
+     * string num: the number of the Creditcard
+     * string code: SecureCode of the CreditCard
+     * sting expiration: date of expiration of the card
+     */
+
     CreditCard(std::string num, std::string code, std::string expiration);
 };
 

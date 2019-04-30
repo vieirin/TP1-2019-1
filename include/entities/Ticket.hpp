@@ -9,6 +9,8 @@ class Ticket {
     TicketCode *code;
 
   public:
+    /** Presentation Constructor takes 1 parameter*/
+
     Ticket(std::string ticketCode);
 };
 

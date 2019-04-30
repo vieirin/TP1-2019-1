@@ -3,6 +3,7 @@
 AgeGroup::AgeGroup(std::string group) { setGroup(group); }
 
 void AgeGroup::setGroup(std::string group) {
+    /*Group verification */
     if (!(group == "L" || group == "10" || group == "12" || group == "14" ||
           group == "16" || group == "18")) {
         throw std::invalid_argument(

@@ -4,6 +4,7 @@ CPF::CPF(std::string cpf) { setCPF(cpf); }
 
 void CPF::setCPF(std::string cpf) {
     auto cpfexpr = std::regex("[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}");
+    /** Regex Format verification*/
     if (!std::regex_match(cpf, cpfexpr)) {
         throw std::invalid_argument("CPF must match XXX.XXX.XXX-XX pattern");
     }

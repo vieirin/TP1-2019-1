@@ -8,7 +8,8 @@
 #include <domains/StartTime.hpp>
 #include <string>
 
-/*Presentation is a presentation in system */
+/** Presentation is a presentation in system */
+
 class Presentation {
   private:
     Availability *amount;
@@ -19,6 +20,14 @@ class Presentation {
     StartTime *time;
 
   public:
+    /** Presentation Constructor takes 6 parameters:
+     * int amount: Amount of tickets available
+     * string code: code of the event
+     * float price: price of event
+     * int room: number of the room of the event
+     * date: Date that the event will start
+     * time: Time that the event will start
+     * */
     Presentation(int amount, std::string code, float price, int room,
                  std::string date, std::string time);
 };
