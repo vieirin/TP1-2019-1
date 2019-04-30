@@ -1,7 +1,6 @@
 #ifndef _ActualDate_H_
 #define _ActualDate_H_
 #include <algorithm>
-#include <domains/enums/months.hpp>
 #include <iostream>
 #include <regex>
 #include <stdexcept>
@@ -20,10 +19,3 @@ class ActualDate {
 };
 
 #endif
-/*
-obj while (1) try {
-    obj.aset("31/20/19") break;
-} catch (std::invalid_argument erro) {
-    print vc fez erda erro.what()
-}
-*/

@@ -1,7 +1,7 @@
 #ifndef _PRESENTATION_H_
 #define _PRESENTATION_H_
+#include <domains/ActualDate.hpp>
 #include <domains/Availability.hpp>
-#include <domains/Date.hpp>
 #include <domains/PresentationCode.hpp>
 #include <domains/Price.hpp>
 #include <domains/Room.hpp>
@@ -11,15 +11,15 @@
 /*Presentation is a presentation in system */
 class Presentation {
   private:
-    Availability *avail;
+    Availability *amount;
     PresentationCode *code;
     Price *price;
     Room *room;
-    Date *date;
+    ActualDate *date;
     StartTime *time;
 
   public:
-    Presentation(int avail, std::string code, float price, int Room,
+    Presentation(int amount, std::string code, float price, int room,
                  std::string date, std::string time);
 };
 

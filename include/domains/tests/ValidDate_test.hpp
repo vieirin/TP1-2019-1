@@ -12,8 +12,9 @@ TEST(ValidDateTest, ValidDateWithMoreLetters) {
 TEST(ValidDateTest, ValidDateWithWrongDate) {
     ASSERT_THROW(ValidDate("21/07/1998"), std::invalid_argument);
 }
-TEST(ValidDateTest, ValidDateDontExist){
-    ASSERT_THROW(ValidDate("15/92"), std::invalid_argument)}
+TEST(ValidDateTest, ValidDateDontExist) {
+    ASSERT_THROW(ValidDate("15/92"), std::invalid_argument);
+}
 
 TEST(ValidDateTest, CorrectScenario) {
     ASSERT_THROW(ValidDate("07/98"), std::invalid_argument)

@@ -2,13 +2,13 @@
 #define _CREDITCARD_H_
 
 #include <domains/CardNumber.hpp>
-#include <domains/SecurityCode.hpp>
+#include <domains/SecureCode.hpp>
 #include <domains/ValidDate.hpp>
 
 class CreditCard {
   private:
     CardNumber *cardnum;
-    SecurityCode *code;
+    SecureCode *code;
     ValidDate *expirationDate;
 
   public:
