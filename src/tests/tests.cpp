@@ -7,7 +7,10 @@
 #include <domains/tests/Price_test.hpp>
 #include <domains/tests/Room_test.hpp>
 #include <domains/tests/Ticket_test.hpp>
-#include <entities/tests/CreditCard.hpp>
+#include <entities/tests/CreditCard_test.hpp>
+#include <entities/tests/Event_test.hpp>
+#include <entities/tests/Ticket_test.hpp>
+#include <entities/tests/User_test.hpp>
 #include <gtest/gtest.h>
 #include <iostream>
 

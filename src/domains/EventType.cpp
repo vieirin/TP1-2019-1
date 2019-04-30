@@ -5,5 +5,5 @@ EventType::EventType(std::string typeName) {
                                                   {"ESPORTE", 2},
                                                   {"SHOW NACIONAL", 3},
                                                   {"SHOW INTERNACIONAL", 4}};
-    type   = evType[typeName];
+    type   = evType.at(typeName);
 }
