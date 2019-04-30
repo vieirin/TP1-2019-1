@@ -1,4 +1,4 @@
-#include <entities/User.hpp>
+#include "entities/Event.hpp"
 
 Event::Event(std::string age, std::string code, std::string name,
              std::string type, std::string city, std::string state) {
