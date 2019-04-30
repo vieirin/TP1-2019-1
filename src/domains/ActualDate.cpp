@@ -4,14 +4,15 @@
 
 ActualDate::ActualDate(std::string date) { setActualDate(date); }
 void ActualDate::setActualDate(std::string date) {
-    std::regex code_regex("^([0123]{2}/[01]{1}[0-9]{1}/[0-9]{2})");
+    std::regex code_regex("^([0123]{1}[0-9]{1}/[01]{1}[0-9]{1}/[0-9]{2})");
     std::smatch match;
-    int mes, year, dia;
+    int mes, year, day;
+    day  = std::stoi(date.substr(0, 2));
     mes  = std::stoi(date.substr(3, 2));
     year = std::stoi(date.substr(6, 2));
     // verify if code inputed matches the regex
     if (std::regex_match(date, match, code_regex)) {
-        // verify if year is a leap year(modulos of 400 and modulos of 4 and not
+
         // modulus of 100)
 
         // month = string(MM);
@@ -23,38 +24,19 @@ void ActualDate::setActualDate(std::string date) {
             } else {
                 leapYear = 0;
             }
-            if (leapYear == 1) {
-                if (dia <= 29 && dia > 0) {
-                    this->date = date;
-
-                } else {
-                    throw std::invalid_argument("Day has to be in [1,29]");
-                }
-            } else {
-
-                if (dia <= 28 && dia > 0) {
-                    this->date = date;
-                } else {
-                    throw std::invalid_argument(
-                        "Not a leapYear-> day has to be in [1,28]");
-                }
-            }
-        }
-        if (mes == 1 && mes == 3 && mes == 5 && mes == 7 && mes == 8 &&
-            mes == 10 && mes == 12) {
-            if (dia <= 31 && dia > 0) {
+            if (leapYear == 1 && day <= 29) {
+                this->date = date;
+            } else if (leapYear == 0 && day <= 28) {
                 this->date = date;
             } else {
-                throw std::invalid_argument("Day field invalid!");
+                throw std::invalid_argument("AAA");
             }
+        } else if (mes != 2 && day <= 31) {
+            this->date = date;
         } else {
-            if (dia <= 30 && dia > 0) {
-                this->date = date;
-            } else {
-                throw std::invalid_argument("Day field invalid!");
-            }
+            throw std::invalid_argument("AAA");
         }
     } else {
-        throw std::invalid_argument("Wrong input format -> DD/MM/AA");
+        throw std::invalid_argument("AAA");
     }
 }
