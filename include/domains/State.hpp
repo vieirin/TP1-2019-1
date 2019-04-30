@@ -7,6 +7,8 @@
 #include <string>
 #include <vector>
 
+/** State defines all possible districts where a Presentation will occur
+ */
 class State {
   private:
     std::string state;

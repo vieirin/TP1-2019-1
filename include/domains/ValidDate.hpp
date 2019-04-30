@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 
+/** ValidDate refers to a expiration date for a Card instance*/
 class ValidDate {
   private:
     std::string date;

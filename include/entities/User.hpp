@@ -4,6 +4,7 @@
 #include <domains/Password.hpp>
 #include <string>
 
+/*User defines system's main entity*/
 class User {
   private:
     CPF cpf;

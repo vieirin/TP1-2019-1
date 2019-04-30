@@ -8,6 +8,7 @@
 #include <domains/StartTime.hpp>
 #include <string>
 
+/*Presentation is a presentation in system */
 class Presentation {
   private:
     Availability avail;

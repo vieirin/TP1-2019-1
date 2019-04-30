@@ -22,10 +22,3 @@ class Date {
 };
 
 #endif
-/*
-obj while (1) try {
-    obj.aset("31/20/19") break;
-} catch (std::invalid_argument erro) {
-    print vc fez erda erro.what()
-}
-*/

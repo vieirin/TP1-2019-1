@@ -5,6 +5,7 @@
 #include <stdexcept>
 #include <string>
 
+/** TicketCode defines a code for a Ticket code must in form DDDD */
 class TicketCode {
   private:
     std::string code;

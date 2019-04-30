@@ -7,6 +7,9 @@
 #include <string>
 #include <vector>
 
+/** StartTime defines a basic type for Presentation time representation
+ *
+ */
 class StartTime {
   private:
     std::string time;

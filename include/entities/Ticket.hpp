@@ -3,6 +3,7 @@
 #include <domains/TicketCode.hpp>
 #include <string>
 
+/*Ticket refers to the tickets instances for an Event */
 class Ticket {
   private:
     TicketCode code;

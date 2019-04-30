@@ -9,6 +9,7 @@
 
 #include <string>
 
+/** Event defines an event in the system */
 class Event {
   private:
     AgeGroup age;
