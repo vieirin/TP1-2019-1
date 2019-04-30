@@ -1,4 +1,5 @@
 #include <domains/CPF.hpp>
+#include <iostream>
 
 CPF::CPF(std::string cpf) { setCPF(cpf); }
 
@@ -11,10 +12,13 @@ void CPF::setCPF(std::string cpf) {
 
     // This removes both '.' from cpf
     auto cpfNoDots = cpf;
-    cpfNoDots.erase(std::remove(cpf.begin(), cpf.end(), '.'), cpf.end());
+    cpfNoDots.erase(std::remove(cpfNoDots.begin(), cpfNoDots.end(), '.'),
+                    cpfNoDots.end());
 
-    if (!(isFirstDigitValid(cpfNoDots) && isSecondDigitValid(cpfNoDots)))
+    if (!isFirstDigitValid(cpfNoDots))
         throw std::invalid_argument("CPF didn't pass first digit validation");
+    if (!isSecondDigitValid(cpfNoDots))
+        throw std::invalid_argument("CPF didn't pass second digit validation");
 
     this->cpf = cpf;
 }
@@ -31,7 +35,7 @@ bool CPF::isFirstDigitValid(std::string cpf) {
             "Verification digits must be separated by '-' from numbers");
 
     auto numericSlice           = cpf.substr(0, separator);
-    auto firstVerificationDigit = cpf.substr(separator++)[0];
+    auto firstVerificationDigit = cpf[separator + 1] - '0';
 
     int multiplier = 10;
     int sum        = 0;
@@ -56,12 +60,13 @@ bool CPF::isSecondDigitValid(std::string cpf) {
 
     // Once '-' position is found we can remove it
     cpf.erase(std::remove(cpf.begin(), cpf.end(), '-'), cpf.end());
-
-    auto numericSlice            = cpf.substr(0, separator);
-    auto secondVerificationDigit = cpf.substr(separator++)[1];
+    auto numericSlice = cpf.substr(0, separator);
+    numericSlice += cpf[separator];
+    auto secondVerificationDigit = cpf[separator + 1] - '0';
 
     int multiplier = 11;
     int sum        = 0;
+    cpf.pop_back();
     for (auto digit : cpf) {
         auto intDigit = std::atoi(&digit);
         sum += intDigit * multiplier;
