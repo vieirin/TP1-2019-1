@@ -1,5 +1,5 @@
-#ifndef _CurrentDate_H_
-#define _CurrentDate_H_
+#ifndef _Date_H_
+#define _Date_H_
 #include <algorithm>
 #include <iostream>
 #include <regex>
@@ -10,15 +10,15 @@
 /** Current date is a domain class used to represent a valid time in formar
  * DD/MM/AAAA
  */
-class CurrentDate {
+class Date {
   private:
     std::string date;
     bool leapYear;
 
   public:
-    CurrentDate(std::string date);
-    void setCurrentDate(std::string date);
-    std::string getCurrentDate();
+    Date(std::string date);
+    void setDate(std::string date);
+    std::string getDate();
 };
 
 #endif

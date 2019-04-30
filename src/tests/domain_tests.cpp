@@ -8,8 +8,14 @@
 #include <domains/tests/Room_test.hpp>
 #include <domains/tests/Ticket_test.hpp>
 #include <gtest/gtest.h>
+#include <iostream>
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
+
+    auto tests_results = RUN_ALL_TESTS();
+    if (tests_results != 0) {
+        std::cout << "Could not run all unitary tests" << std::endl;
+    }
+    return 0;
 }

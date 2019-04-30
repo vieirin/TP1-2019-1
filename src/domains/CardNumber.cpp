@@ -1,8 +1,8 @@
 #include <cctype>
-#include <domains/Card.hpp>
+#include <domains/CardNumber.hpp>
 
-Card::Card(std::string number) { setCard(number); }
-void Card::setCard(std::string Card) {
+CardNumber::CardNumber(std::string number) { setCardNumber(number); }
+void CardNumber::setCardNumber(std::string number) {
     std::regex code_regex("[0-9]{16}");
     std::smatch match;
     int sumTotal;
@@ -38,7 +38,7 @@ void Card::setCard(std::string Card) {
         if (sumTotal % 10 == 0) {
             this->number = number;
         } else {
-            throw std::invalid_argument("Card input must contain only "
+            throw std::invalid_argument("CardNumber input must contain only "
                                         "letters and only 1 space between");
         }
     }

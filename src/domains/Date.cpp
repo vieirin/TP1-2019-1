@@ -1,8 +1,8 @@
 #include <cctype>
-#include <domains/CurrentDate.hpp>
+#include <domains/Date.hpp>
 
-CurrentDate::CurrentDate(std::string date) { setCurrentDate(date); }
-void CurrentDate::setCurrentDate(std::string date) {
+Date::Date(std::string date) { setDate(date); }
+void Date::setDate(std::string date) {
     std::regex code_regex("^([0123]{2}/[01]{1}[0-9]{1}/[0-9]{2})");
     std::smatch match;
     int mes, year, dia;
