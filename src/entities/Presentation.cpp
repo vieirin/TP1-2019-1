@@ -1,10 +1,9 @@
 #include <entities/Presentation.hpp>
-Presentation::Presentation(int avail, std::string code, float price, int room,
-                           std::string date, std::string time) {
-    this->avail = Availability(avail);
-    this->code  = PresentationCode(code);
-    this->price = Price(price);
-    this->room  = Room(room);
-    this->date  = ActualDate(date);
-    this->time  = StartTime(time);
+
+Presentation::Presentation(int amount, std::string code, float price, int room,
+                           std::string date, std::string startTime) {
+    avail       = new Availability(amount);
+    this->code  = new PresentationCode(code);
+    this->price = new Price(price);
+    this->room  = new Room(room);
 }

@@ -8,7 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/PassManager",
+            "program": "${workspaceFolder}/build/DomainTest",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

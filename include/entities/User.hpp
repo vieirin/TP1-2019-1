@@ -7,8 +7,8 @@
 /*User defines system's main entity*/
 class User {
   private:
-    CPF cpf;
-    Password passwd;
+    CPF *cpf;
+    Password *passwd;
 
   public:
     User(std::string cpfNumber, std::string pwd);

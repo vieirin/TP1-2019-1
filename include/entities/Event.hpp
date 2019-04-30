@@ -12,12 +12,12 @@
 /** Event defines an event in the system */
 class Event {
   private:
-    AgeGroup age;
-    EventCode code;
-    EventName name;
-    EventType type;
-    City city;
-    State state;
+    AgeGroup *age;
+    EventCode *code;
+    EventName *name;
+    EventType *type;
+    City *city;
+    State *state;
 
   public:
     Event(std::string age, std::string code, std::string name, std::string type,

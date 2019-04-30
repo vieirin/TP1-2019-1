@@ -1,8 +1,8 @@
 #include <entities/CreditCard.hpp>
 
-CreditCard::CreditCard(std::string cardNumber, std::string code,
-                       std::string date) {
-    this->cardNumber = CardNumber(cardNumber);
-    this->code       = SecureCode(code);
-    this->date       = ValidDate(date);
+CreditCard::CreditCard(std::string num, std::string code,
+                       std::string expiration) {
+    cardnum              = new CardNumber(num);
+    this->code           = new SecurityCode(code);
+    this->expirationDate = new ValidDate(expiration);
 }

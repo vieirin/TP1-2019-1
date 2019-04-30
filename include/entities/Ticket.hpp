@@ -6,7 +6,7 @@
 /*Ticket refers to the tickets instances for an Event */
 class Ticket {
   private:
-    TicketCode code;
+    TicketCode *code;
 
   public:
     Ticket(std::string ticketCode);
