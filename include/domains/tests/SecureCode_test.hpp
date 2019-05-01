@@ -15,7 +15,4 @@ TEST(SecureCodeTest, CodeWithLessThan3Digits) {
     ASSERT_THROW(SecureCode("11"), std::invalid_argument);
 }
 
-TEST(SecureCodeTest, CorrectScenario) {
-    ASSERT_THROW(SecureCode("422"), std::invalid_argument)
-        << "Didnt passed because didnt throw invalid_Argument->correct input!";
-}
+TEST(SecureCodeTest, CorrectScenario) { ASSERT_NO_THROW(SecureCode("422")); }

@@ -49,8 +49,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_actual_date__test_8hpp.html",
-"class_ticket.html"
+"_actual_date_8cpp.html",
+"class_room.html#ae1645c6cc522f4b1c0ba980736cb440d"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -3,7 +3,7 @@
 
 ValidDate::ValidDate(std::string date) { setValidDate(date); }
 void ValidDate::setValidDate(std::string date) {
-    std::regex code_regex("^[01]{1}[0-9]{1}/[0-9]{2}");
+    std::regex code_regex("^(0?[1-9]|1[012])/[0-9]{2}");
     std::smatch match;
     /** Regex Format verification*/
     if (std::regex_match(date, match, code_regex)) {

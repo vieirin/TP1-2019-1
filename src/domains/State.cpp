@@ -1,5 +1,6 @@
 #include <cctype>
 #include <domains/State.hpp>
+#include <iostream>
 
 State::State(std::string state) { setState(state); }
 void State::setState(std::string state) {
@@ -20,10 +21,12 @@ void State::setState(std::string state) {
             (state.compare("MT") == 0) || (state.compare("RR") == 0) ||
             (state.compare("MS") == 0) || (state.compare("SC") == 0) ||
             (state.compare("SP") == 0) || (state.compare("SE") == 0) ||
-            (state.compare("TO"))) {
+            (state.compare("TO") == 0)) {
             this->state = state;
-        } else
-            this->state = state;
+        } else {
+            std::cout << "asdasd" << std::endl;
+            throw std::invalid_argument("Not a valid state");
+        }
     } else {
         throw std::invalid_argument("State must be of type XXX");
     }

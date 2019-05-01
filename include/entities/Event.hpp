@@ -20,9 +20,7 @@ class Event {
     State *state;
 
   public:
-    /** Presentation Constructor takes 5 parameters: */
-
- std::string code, std::string name, std::string type,
+    Event(std::string age, std::string code, std::string name, std::string type,
           std::string city, std::string state);
 };
 

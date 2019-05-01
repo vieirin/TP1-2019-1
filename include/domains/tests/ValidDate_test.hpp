@@ -16,9 +16,6 @@ TEST(ValidDateTest, ValidDateDontExist) {
     ASSERT_THROW(ValidDate("15/92"), std::invalid_argument);
 }
 
-TEST(ValidDateTest, CorrectScenario) {
-    ASSERT_THROW(ValidDate("07/98"), std::invalid_argument)
-        << "Didnt passed because didnt throw invalid_Argument->Correct input!";
-}
+TEST(ValidDateTest, CorrectScenario) { ASSERT_NO_THROW(ValidDate("07/98")); }
 
 // Ludum Dare
