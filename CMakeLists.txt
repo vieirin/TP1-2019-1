@@ -25,7 +25,7 @@ file (GLOB_RECURSE TEST_SOURCE_FILES ${SOURCE_DIR}/tests/*.cpp)
 
 file (GLOB_RECURSE TEST_HEADER_FILES_DOMAINS ${INCLUDE_DIR}/domains/tests/*.hpp)
 file (GLOB_RECURSE TEST_HEADER_FILES_ENTITIES ${INCLUDE_DIR}/entities/tests/*.hpp)
-add_executable(DomainTest ${TEST_SOURCE_FILES}
+add_executable(Test ${TEST_SOURCE_FILES}
                           ${DOMAINS_HEADER_FILES}
                           ${DOMAINS_SOURCE_FILES}
                           ${ENTITIES_HEADER_FILES}
@@ -33,6 +33,6 @@ add_executable(DomainTest ${TEST_SOURCE_FILES}
                           ${TEST_HEADER_FILES_DOMAINS}
                           ${TEST_HEADER_FILES_ENTITIES}
 )           
-add_test(AllTestsInDomain DomainTest)
-target_include_directories(DomainTest PUBLIC ${INCLUDE_DIR})
-target_link_libraries(DomainTest GTest::GTest GTest::Main)
+add_test(AllTestsInDomain Test)
+target_include_directories(Test PUBLIC ${INCLUDE_DIR})
+target_link_libraries(Test GTest::GTest GTest::Main)
