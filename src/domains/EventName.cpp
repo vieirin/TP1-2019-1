@@ -14,4 +14,4 @@ void EventName::setName(std::string name) {
     this->name = nameNoSpaces;
 }
 
-std::string EventName::getName() { return name; }
+std::string EventName::getName() { return this->name; }

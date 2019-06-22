@@ -12,7 +12,6 @@
 class State {
   private:
     std::string state;
-    // bool leapYear;
 
   public:
     State(std::string state);

@@ -9,6 +9,8 @@ void TicketCode::setCode(std::string code) {
     if (std::regex_match(code, match, code_regex)) {
         this->code = code;
     } else {
-        throw std::invalid_argument("Event code must be like XXX");
+        throw std::invalid_argument("Ticket Code must be like XXXXX");
     }
 }
+
+std::string TicketCode::getCode() { return this->code; }

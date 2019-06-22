@@ -17,3 +17,7 @@ TEST(PasswordTest, strongPassword) {
     auto pass = Password("Aler12");
     ASSERT_EQ(pass.getPassword(), "Aler12");
 }
+
+Password q("Alert12");
+
+TEST(PasswordTest, TestingReturns) { EXPECT_EQ("Alert12", q.getPassword()); }

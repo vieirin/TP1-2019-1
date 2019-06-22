@@ -12,3 +12,5 @@ void EventCode::setCode(std::string code) {
         throw std::invalid_argument("Event code must be like XXX");
     }
 }
+
+std::string EventCode::getCode() { return this->code; }

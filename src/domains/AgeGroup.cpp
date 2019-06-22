@@ -12,4 +12,4 @@ void AgeGroup::setGroup(std::string group) {
     this->group = group;
 }
 
-std::string AgeGroup::getGroup() { return group; }
+std::string AgeGroup::getGroup() { return this->group; }

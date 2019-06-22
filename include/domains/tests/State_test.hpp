@@ -25,3 +25,7 @@ TEST(StateTest, CorrectScenario) {
     ASSERT_NO_THROW(State("DF"))
         << "didnt throw invalid_Argument->Correct input!";
 }
+
+State n("DF");
+
+TEST(StateTestTest, TestingReturns) { EXPECT_EQ("DF", n.getState()); }

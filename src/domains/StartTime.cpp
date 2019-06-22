@@ -13,3 +13,4 @@ void StartTime::setStartTime(std::string startTime) {
             "Time has to be of type HH:MM following the 24h rule");
     }
 }
+std::string StartTime::getStartTime() { return this->time; }

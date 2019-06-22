@@ -14,3 +14,7 @@ TEST(AgeGroupTest, freeGroup) {
         ASSERT_EQ(group.getGroup(), allowed);
     }
 }
+
+AgeGroup b("L");
+
+TEST(AgeGroupTest, TestingReturns) { EXPECT_EQ("L", b.getGroup()); }

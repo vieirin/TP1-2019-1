@@ -1,3 +1,5 @@
+
+#include <domains/tests/ActualDate_test.hpp>
 #include <domains/tests/AgeGroup_test.hpp>
 #include <domains/tests/Availability_test.hpp>
 #include <domains/tests/CPF_test.hpp>

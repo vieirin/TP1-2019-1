@@ -12,3 +12,4 @@ void SecureCode::setSecureCode(std::string code) {
         throw std::invalid_argument("SecureCode must be of type XXX");
     }
 }
+std::string SecureCode::getSecureCode() { return this->code; }

@@ -14,6 +14,7 @@ class PresentationCode {
   public:
     PresentationCode(std::string code);
     void setPresentationCode(std::string code);
+    std::string getPresentationCode();
 };
 
 #endif

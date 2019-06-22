@@ -18,6 +18,7 @@ class CPF {
   public:
     CPF(std::string cpf);
     void setCPF(std::string cpf);
+    std::string getCPF();
 };
 
 #endif

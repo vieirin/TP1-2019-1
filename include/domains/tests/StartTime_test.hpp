@@ -18,3 +18,9 @@ TEST(StartTimeTest,
 TEST(StartTimeTest, StartTimeValidInput) {
     ASSERT_THROW(StartTime("12:45"), std::invalid_argument);
 }
+
+StartTime m("12:45");
+
+TEST(StartTimeTestTest, TestingReturns) {
+    EXPECT_EQ("12:45", m.getStartTime());
+}

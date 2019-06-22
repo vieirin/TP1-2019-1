@@ -10,4 +10,4 @@ void Price::setPrice(float value) {
     this->value = value;
 }
 
-float Price::getPrice() { return value; }
+float Price::getPrice() { return this->value; }

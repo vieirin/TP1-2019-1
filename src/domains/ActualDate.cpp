@@ -27,7 +27,7 @@ void ActualDate::setActualDate(std::string date) {
             } else if (leapYear == 0 && day <= 28) {
                 this->date = date;
             } else {
-                throw std::invalid_argument("Invalid Day Bissext");
+                throw std::invalid_argument("Invalid Day");
             }
             /**Verify if month is different from febrary*/
             /**Day can reach 31 days */
@@ -42,3 +42,5 @@ void ActualDate::setActualDate(std::string date) {
         throw std::invalid_argument("Invalid Format (ActualDate");
     }
 }
+
+std::string ActualDate::getActualDate() { return this->date; }

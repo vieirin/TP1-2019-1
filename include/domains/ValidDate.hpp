@@ -11,7 +11,6 @@
 class ValidDate {
   private:
     std::string date;
-    // bool leapYear;
 
   public:
     ValidDate(std::string date);

@@ -14,3 +14,5 @@ void City::setCity(std::string city) {
             "City input must contain only letters and only 1 space between");
     }
 }
+
+std::string City::getCity() { return this->city; }

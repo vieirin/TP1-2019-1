@@ -4,7 +4,7 @@
 #include <string>
 // Testes
 TEST(CardNumberTest, FormatValid) {
-    ASSERT_THROW(CardNumber("1234123123123444"), std::invalid_argument)
+    ASSERT_THROW(CardNumber("5105105105105100"), std::invalid_argument)
         << "Boa1";
 }
 TEST(CardNumberTest, FormatValidWrongSequence) {
@@ -18,3 +18,9 @@ TEST(CardNumberTest, FormatInvalid) {
 }
 
 // Ludum Dare
+
+CardNumber d("5105105105105100");
+
+TEST(CardNumberTest, TestingReturns) {
+    EXPECT_EQ("5105105105105100", d.getCardNumber());
+}

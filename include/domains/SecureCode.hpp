@@ -12,7 +12,6 @@
 class SecureCode {
   private:
     std::string code;
-    // bool leapYear;
 
   public:
     SecureCode(std::string code);

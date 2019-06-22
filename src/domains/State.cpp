@@ -31,3 +31,5 @@ void State::setState(std::string state) {
         throw std::invalid_argument("State must be of type XXX");
     }
 }
+
+std::string State::getState() { return this->state; }

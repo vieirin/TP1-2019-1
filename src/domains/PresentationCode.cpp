@@ -12,6 +12,8 @@ void PresentationCode::setPresentationCode(std::string code) {
         this->code = code;
     } else {
         /** Regex Format verification*/
-        throw std::invalid_argument("Event code must be like XXXX");
+        throw std::invalid_argument("PresentationCode must be like XXXX");
     }
 }
+
+std::string PresentationCode::getPresentationCode() { return this->code; }

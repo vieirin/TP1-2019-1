@@ -16,3 +16,7 @@ TEST(SecureCodeTest, CodeWithLessThan3Digits) {
 }
 
 TEST(SecureCodeTest, CorrectScenario) { ASSERT_NO_THROW(SecureCode("422")); }
+
+SecureCode l("345");
+
+TEST(SecureCodeTest, TestingReturns) { EXPECT_EQ("345", l.getSecureCode()); }

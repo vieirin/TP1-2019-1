@@ -13,6 +13,7 @@ class TicketCode {
   public:
     TicketCode(std::string passCode);
     void setCode(std::string passCode);
+    std::string getCode();
 };
 
 #endif

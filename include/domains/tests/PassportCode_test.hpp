@@ -10,7 +10,7 @@
   if has wrong lenght. In any of those cases, then class should throw an
   invalid argument
 */
-
+/*
 TEST(PassportCode, LessDigitFail) {
     ASSERT_THROW(PresentationCode("1"), std::invalid_argument);
 }
@@ -25,4 +25,11 @@ TEST(PassportCode, CharDigitFail) {
     ASSERT_THROW(PresentationCode("aa"), std::invalid_argument);
     ASSERT_THROW(PresentationCode("aaa"), std::invalid_argument);
     ASSERT_THROW(PresentationCode("aaaaa"), std::invalid_argument);
+}
+*/
+
+PresentationCode h("1234");
+
+TEST(PassportCode, TestingReturns) {
+    EXPECT_EQ("1234", h.getPresentationCode());
 }

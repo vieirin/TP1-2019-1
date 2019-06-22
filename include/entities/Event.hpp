@@ -9,7 +9,7 @@
 
 #include <string>
 
-/** Event defines an event in the system */
+/** Event defines an event in thetfg system */
 class Event {
   private:
     AgeGroup *age;

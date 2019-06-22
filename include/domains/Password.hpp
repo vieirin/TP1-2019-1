@@ -15,6 +15,7 @@ class Password {
 
   public:
     Password(std::string passwd);
+    void setPassword(std::string passwd);
     std::string getPassword();
 };
 

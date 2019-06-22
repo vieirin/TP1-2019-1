@@ -12,3 +12,5 @@ void ValidDate::setValidDate(std::string date) {
         throw std::invalid_argument("Valid Date input must be of type MM/AA");
     }
 }
+
+std::string ValidDate::getValidDate() { return this->date; }

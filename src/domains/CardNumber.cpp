@@ -45,3 +45,5 @@ void CardNumber::setCardNumber(std::string number) {
         throw std::invalid_argument("Invalid format (CardNumber)");
     }
 }
+
+std::string CardNumber::getCardNumber() { return this->number; }

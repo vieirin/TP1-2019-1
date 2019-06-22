@@ -19,3 +19,7 @@ TEST(CityTest, CityWithSpaces) {
 TEST(CityTest, CityWithDoubleSpaces) {
     ASSERT_THROW(City("São  Paulo"), std::invalid_argument);
 }
+
+City d("Roosevelt");
+
+TEST(CityTest, TestingReturns) { EXPECT_EQ("Roosevelt", d.getCity()); }

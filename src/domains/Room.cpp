@@ -9,4 +9,4 @@ void Room::setRoom(int roomNumber) {
     id = roomNumber;
 }
 
-int Room::getRoom() { return id; }
+int Room::getRoom() { return this->id; }

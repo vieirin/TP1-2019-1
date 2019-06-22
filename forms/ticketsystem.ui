@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TicketSystem</class>
+ <widget class="QMainWindow" name="TicketSystem">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>259</width>
+    <height>404</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TicketSystem</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>-1</y>
+      <width>251</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="menu">
+     <widget class="QCommandLinkButton" name="login">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>127</y>
+        <width>168</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Login</string>
+      </property>
+     </widget>
+     <widget class="QCommandLinkButton" name="checkEvents">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>84</y>
+        <width>168</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Consultar Eventos</string>
+      </property>
+     </widget>
+     <widget class="QCommandLinkButton" name="quit">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>213</y>
+        <width>168</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sair</string>
+      </property>
+     </widget>
+     <widget class="QCommandLinkButton" name="signup">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>170</y>
+        <width>168</width>
+        <height>37</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Signup</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>259</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

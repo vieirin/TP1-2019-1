@@ -19,3 +19,7 @@ TEST(ValidDateTest, ValidDateDontExist) {
 TEST(ValidDateTest, CorrectScenario) { ASSERT_NO_THROW(ValidDate("07/98")); }
 
 // Ludum Dare
+
+ValidDate p("09/15");
+
+TEST(ValidDateTest, TestingReturns) { EXPECT_EQ("09/15", p.getValidDate()); }

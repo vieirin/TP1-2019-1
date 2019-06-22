@@ -74,3 +74,5 @@ bool CPF::isSecondDigitValid(std::string cpf) {
     }
     return (sum * 10) % 11 == secondVerificationDigit;
 }
+
+std::string CPF::getCPF() { return this->cpf; }
