@@ -27,26 +27,26 @@
 
 class ISAuthenticate {
   public:
-    virtual void execute(CPF cpf);
-    virtual void setModelAuthenticate(ISAuthenticate model);
+    virtual void execute(CPF cpf)                        = 0;
+    virtual void ModelAuthenticate(ISAuthenticate model) = 0;
 }
 
 class ISUser {
   public:
-    virtual void execute(CPF cpf);
-    virtual void setModelUser(ISAuthenticate model);
+    virtual void execute(CPF cpf)        = 0;
+    virtual void ModelUser(ISUser model) = 0;
 }
 // Classe Evento dependento
 class ISEvent {
   public:
-    virtual void execute(CPF cpf);
-    virtual void setModelEvent(ISEvent model);
+    virtual void execute(CPF cpf)          = 0;
+    virtual void ModelEvent(ISEvent model) = 0;
 }
 
 class ISSells {
   public:
-    virtual void execute(CPF cpf);
-    virtual void setModelSells(ISSells model);
+    virtual void execute(CPF cpf)          = 0;
+    virtual void ModelSells(ISSells model) = 0;
 }
 
 #endif _PresentationInterface_H_
