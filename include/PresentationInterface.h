@@ -1,5 +1,5 @@
-#ifndef _ServiceInterface_H_
-#define _ServiceInterface_H_
+#ifndef _PresentationInterface_H_
+#define _PresentationInterface_H_
 
 #include <domains/ActualDate.hpp>
 #include <domains/AgeGroup.hpp>
@@ -49,4 +49,4 @@ class ISSells {
     virtual void setModelSells(ISSells model);
 }
 
-#endif _ServiceInterface_H_
+#endif _PresentationInterface_H_
