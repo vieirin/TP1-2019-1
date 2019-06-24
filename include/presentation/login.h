@@ -24,6 +24,10 @@ private slots:
 
     void on_passwdField_textChanged(const QString &arg1);
 
+    void on_okButton_clicked();
+
+    void on_cancelButton_clicked();
+
 private:
     Ui::Login *ui;
     std::string cpf;

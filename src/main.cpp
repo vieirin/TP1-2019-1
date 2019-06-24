@@ -1,11 +1,11 @@
-#include <iostream>
-#include <domains/EventCode.hpp>
-#include <string>
+#include <presentation/ticketsystem.h>
+#include <QApplication>
 
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
-    std::string code("233");
-    EventCode event(code);
-    std::cout << "hello world!" << code << std::endl;
-    return 0;
+    QApplication a(argc, argv);
+    TicketSystem w;
+    w.show();
+
+    return a.exec();
 }

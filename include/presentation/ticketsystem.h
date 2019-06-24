@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <presentation/login.h>
+#include <presentation/signup.hpp>
 
 namespace Ui {
 class TicketSystem;
@@ -21,8 +22,14 @@ private slots:
     void on_actionQuit_triggered();
 
     void on_login_clicked();
+
+    void on_quit_clicked();
+
+    void on_signup_clicked();
+
 private:
     Login *loginWindow;
+    Signup *signupWindow;
     Ui::TicketSystem *ui;
 };
 

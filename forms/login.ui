@@ -26,34 +26,86 @@
     <string>Login</string>
    </property>
   </widget>
-  <widget class="QSplitter" name="splitter">
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>320</y>
+     <width>168</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="cancelButton">
+      <property name="text">
+       <string>cancel</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="okButton">
+      <property name="text">
+       <string>ok</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLineEdit" name="cpfField">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>134</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>15</number>
+   </property>
+   <property name="clearButtonEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="passwdField">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>192</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cpf_label">
    <property name="geometry">
     <rect>
      <x>30</x>
      <y>110</y>
-     <width>201</width>
-     <height>111</height>
+     <width>23</width>
+     <height>18</height>
     </rect>
    </property>
-   <property name="orientation">
-    <enum>Qt::Vertical</enum>
+   <property name="text">
+    <string>CPF</string>
    </property>
-   <widget class="QLabel" name="cpf_label">
-    <property name="text">
-     <string>CPF</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="cpfField"/>
-   <widget class="QLabel" name="passwd_label">
-    <property name="text">
-     <string>Senha</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="passwdField">
-    <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
-    </property>
-   </widget>
+  </widget>
+  <widget class="QLabel" name="passwd_label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>168</y>
+     <width>38</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Senha</string>
+   </property>
   </widget>
  </widget>
  <resources/>

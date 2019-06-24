@@ -40,7 +40,7 @@ void Login::on_cpfField_cursorPositionChanged(int oldPos, int newPos)
 void Login::on_cpfField_textChanged(const QString &cpfInput)
 {
     const QChar *lastchar = cpfInput.end()-1;
-    if (lastchar->isDigit() || *lastchar == "-" || *lastchar == "."){
+    if (lastchar->isDigit()){
         if (cpfInput.size() < 15)
             cpf = cpfInput.toUtf8().data();
         const QString textDisplay(cpf.data());
@@ -52,4 +52,13 @@ void Login::on_cpfField_textChanged(const QString &cpfInput)
 void Login::on_passwdField_textChanged(const QString &pwdInput)
 {
     passwd = pwdInput.toUtf8().data();
+}
+
+void Login::on_okButton_clicked()
+{
+}
+
+void Login::on_cancelButton_clicked()
+{
+    this->deleteLater();
 }
