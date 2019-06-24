@@ -1,9 +1,10 @@
 #include <presentation/signup.hpp>
 #include "ui_signup.h"
 
-Signup::Signup(QWidget *parent) : QWidget (parent), ui(new Ui::Signup) {
+Signup::Signup(QWidget *parent, std::shared_ptr<UsersContainer> uc) : QWidget (parent), ui(new Ui::Signup) {
     ui->setupUi(this);
     hasDeleteCalled = false;
+    users_container = uc;
 }
 
 Signup::~Signup()
@@ -59,12 +60,14 @@ void Signup::on_confirmpasswdLabel_textChanged(const QString &conf_password)
 void Signup::on_okButton_clicked()
 {
     if (passwd != "" && passwd == confirm_passwd) {
-        hasDeleteCalled = true;
-        this->deleteLater();
+        if(users_container->SignUp(cpf, passwd)) {
+            hasDeleteCalled = true;
+            this->deleteLater();
+        } else {
+            ui->errMsg->setText("Error creating user, try again");
+        }
     } else {
-        QPalette pal = ui->cpfInput->palette();
-        pal.setColor(QPalette::WindowText, Qt::red);
-        ui->cpfInput->setPalette(pal);
+        ui->errMsg->setText("Passwords mismatch");
     }
 }
 

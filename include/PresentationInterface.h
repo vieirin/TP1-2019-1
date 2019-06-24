@@ -1,5 +1,5 @@
-#ifndef _PresentationInterface_H_
-#define _PresentationInterface_H_
+#ifndef PresentationInterface_H_
+#define PresentationInterface_H_
 
 #include <domains/ActualDate.hpp>
 #include <domains/AgeGroup.hpp>
@@ -8,7 +8,6 @@
 #include <domains/CardNumber.hpp>
 #include <domains/EventCode.hpp>
 #include <domains/EventName.hpp>
-#include <domains/PassportCode.hpp>
 #include <domains/Password.hpp>
 #include <domains/PresentationCode.hpp>
 #include <domains/Price.hpp>
@@ -25,28 +24,35 @@
 #include <entities/Ticket.hpp>
 #include <entities/User.hpp>
 
-class ISAuthenticate {
-  public:
-    virtual void execute(CPF cpf)                        = 0;
-    virtual void ModelAuthenticate(ISAuthenticate model) = 0;
-}
+/*
+namespace PresentationInterface {
+    class IAuthenticate {
+      public:
+        virtual void execute(CPF cpf)                        = 0;
+        virtual void ModelAuthenticate(User model) = 0;
+        virtual ~IAuthenticate() = 0;
+    };
 
-class ISUser {
-  public:
-    virtual void execute(CPF cpf)        = 0;
-    virtual void ModelUser(ISUser model) = 0;
-}
-// Classe Evento dependento
-class ISEvent {
-  public:
-    virtual void execute(CPF cpf)          = 0;
-    virtual void ModelEvent(ISEvent model) = 0;
-}
+    class IUser {
+      public:
+        virtual void execute(CPF cpf)        = 0;
+        virtual void ModelUser(User model) = 0;
+        virtual ~IUser();
+    };
+    // Classe Evento dependento
+    class IEvent {
+      public:
+        virtual void execute(CPF cpf)          = 0;
+        virtual void ModelEvent(Event model) = 0;
+        virtual ~IEvent() = 0;
+    };
 
-class ISSells {
-  public:
-    virtual void execute(CPF cpf)          = 0;
-    virtual void ModelSells(ISSells model) = 0;
-}
+    class ISells {
+      public:
+        virtual void execute(CPF cpf)          = 0;
+        // virtual void ModelSells(ISSells model) = 0;
+        virtual ~ISells() = 0;
+    };
+}*/
 
-#endif _PresentationInterface_H_
+#endif

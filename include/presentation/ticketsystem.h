@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <presentation/login.h>
 #include <presentation/signup.hpp>
+#include <ServiceInterface.h>
+
 
 namespace Ui {
 class TicketSystem;
@@ -28,6 +30,7 @@ private slots:
     void on_signup_clicked();
 
 private:
+    std::shared_ptr<UsersContainer> users_container;
     Login *loginWindow;
     Signup *signupWindow;
     Ui::TicketSystem *ui;

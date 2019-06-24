@@ -79,6 +79,19 @@
        <string>Signup</string>
       </property>
      </widget>
+     <widget class="QLabel" name="welcome">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>

@@ -2,7 +2,7 @@
 #define SIGNUP_CPP
 
 #include <QWidget>
-
+#include <ServiceContainers/userscontainer.hpp>
 
 namespace Ui {
 class Signup;
@@ -13,7 +13,7 @@ class Signup : public QWidget
     Q_OBJECT
 public:
 
-    explicit Signup(QWidget *parent);
+    explicit Signup(QWidget *parent, std::shared_ptr<UsersContainer> uc);
     ~Signup();
 
 private slots:
@@ -31,6 +31,7 @@ private slots:
 
 private:
     bool hasDeleteCalled;
+    std::shared_ptr<UsersContainer> users_container;
     Ui::Signup *ui;
     std::string cpf;
     std::string passwd;

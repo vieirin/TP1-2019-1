@@ -8,6 +8,8 @@ void Password::setPassword(std::string passwd) {
         std::regex("^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?!.*(.).*\1).{6}$");
     if (!std::regex_match(passwd, expression)) {
         this->password = passwd;
+    } else {
+        throw std::invalid_argument("Wrong password format");
     }
 }
 

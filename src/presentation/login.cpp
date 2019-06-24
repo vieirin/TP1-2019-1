@@ -1,11 +1,12 @@
 #include <presentation/login.h>
 #include "ui_login.h"
 
-Login::Login(QWidget *parent) :
+Login::Login(QWidget *parent, std::shared_ptr<UsersContainer> uc) :
     QWidget (parent),
     ui(new Ui::Login)
 {
     ui->setupUi(this);
+    users_container = uc;
 }
 
 Login::~Login()
@@ -51,11 +52,20 @@ void Login::on_cpfField_textChanged(const QString &cpfInput)
 
 void Login::on_passwdField_textChanged(const QString &pwdInput)
 {
+    ui->errorMsg->setText("");
     passwd = pwdInput.toUtf8().data();
 }
 
 void Login::on_okButton_clicked()
 {
+    if(users_container->SignIn(cpf, passwd)){
+        //go back to previous screen
+        this->deleteLater();
+    } else {
+        QString errMsg = "Could not login, check your credentials";
+        ui->errorMsg->setText(errMsg);
+    }
+
 }
 
 void Login::on_cancelButton_clicked()

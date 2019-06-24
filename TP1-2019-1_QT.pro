@@ -25,6 +25,7 @@ INCLUDEPATH += "include/"
 CONFIG += c++11
 
 SOURCES += \
+    src/ServiceContainers/userscontainer.cpp \
         src/domains/ActualDate.cpp \
         src/domains/AgeGroup.cpp \
         src/domains/Availability.cpp \
@@ -54,6 +55,9 @@ SOURCES += \
         src/presentation/login.cpp \
 
 HEADERS += \
+    include/PresentationInterface.h \
+    include/ServiceContainers/userscontainer.hpp \
+    include/ServiceInterface.h \
         include/domains/ActualDate.hpp \
         include/domains/AgeGroup.hpp \
         include/domains/Availability.hpp \
@@ -78,9 +82,9 @@ HEADERS += \
         include/entities/Presentation.hpp \
         include/entities/Ticket.hpp \
         include/entities/User.hpp \
-    include/presentation/signup.hpp \
+        include/presentation/signup.hpp \
         include/presentation/ticketsystem.h \
-        include/presentation/login.h \
+        include/presentation/login.h
 
 FORMS += \
         forms/login.ui \

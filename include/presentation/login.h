@@ -2,7 +2,7 @@
 #define LOGIN_H
 
 #include <QWidget>
-
+#include <ServiceContainers/userscontainer.hpp>
 namespace Ui {
 class Login;
 }
@@ -12,7 +12,7 @@ class Login : public QWidget
     Q_OBJECT
 
 public:
-    explicit Login(QWidget *parent);
+    explicit Login(QWidget *parent, std::shared_ptr<UsersContainer> uc);
     ~Login();
 
 
@@ -29,6 +29,7 @@ private slots:
     void on_cancelButton_clicked();
 
 private:
+    std::shared_ptr<UsersContainer> users_container;
     Ui::Login *ui;
     std::string cpf;
     std::string passwd;
