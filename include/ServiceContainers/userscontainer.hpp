@@ -2,6 +2,7 @@
 #define USERSCONTAINER_HPP
 #include <ServiceInterface.h>
 #include <entities/User.hpp>
+#include <entities/CreditCard.hpp>
 
 class UsersContainer : ServiceInterface::IUser
 {
@@ -12,7 +13,7 @@ private:
 public:
     UsersContainer();
     bool Delete(std::string cpf);
-    bool SignUp(std::string cpf, std::string pwd);
+    bool SignUp(std::string cpf, std::string pwd, std::shared_ptr<CreditCard> credit_card);
     std::shared_ptr<User> Search(std::string cpf);
     bool SignIn(std::string cpf, std::string pwd);
     std::string LoggedUser();

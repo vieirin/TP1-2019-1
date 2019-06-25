@@ -9,6 +9,7 @@ TicketSystem::TicketSystem(QWidget *parent) :
     ui->setupUi(this);
     loginWindow = nullptr;
     signupWindow = nullptr;
+    loggedWindow = nullptr;
     users_container = std::make_shared<UsersContainer>();
 }
 
@@ -37,6 +38,7 @@ void TicketSystem::on_login_clicked()
     ui->stackedWidget->addWidget(loginWindow);
     loginWindowIdx = ui->stackedWidget->indexOf(loginWindow);
     ui->stackedWidget->setCurrentIndex(loginWindowIdx);
+    this->connect(loginWindow, SIGNAL(loginWindow->logged(bool)), this, SLOT(on_logged(bool)));
 }
 
 
@@ -61,4 +63,19 @@ void TicketSystem::on_signup_clicked()
     ui->stackedWidget->addWidget(signupWindow);
     signupWindowIdx = ui->stackedWidget->indexOf(signupWindow);
     ui->stackedWidget->setCurrentIndex(signupWindowIdx);
+}
+
+void TicketSystem::on_logged(bool logged) {
+    if (logged) {
+        int loggedWindowIdx = 0;
+        if (loggedWindow != nullptr) {
+            loggedWindowIdx = ui->stackedWidget->indexOf(loggedWindow);
+            if (loggedWindowIdx != -1)
+                ui->stackedWidget->removeWidget(loggedWindow);
+        }
+        loggedWindow = new Logged(this);
+        ui->stackedWidget->addWidget(loggedWindow);
+        loggedWindowIdx = ui->stackedWidget->indexOf(loggedWindow);
+        ui->stackedWidget->setCurrentIndex(loggedWindowIdx);
+    }
 }

@@ -15,7 +15,8 @@ public:
     explicit Login(QWidget *parent, std::shared_ptr<UsersContainer> uc);
     ~Login();
 
-
+signals:
+    void logged(bool);
 
 private slots:
     void on_cpfField_cursorPositionChanged(int arg1, int arg2);

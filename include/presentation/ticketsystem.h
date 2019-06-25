@@ -5,7 +5,7 @@
 #include <presentation/login.h>
 #include <presentation/signup.hpp>
 #include <ServiceInterface.h>
-
+#include <presentation/logged.hpp>
 
 namespace Ui {
 class TicketSystem;
@@ -19,7 +19,9 @@ public:
     explicit TicketSystem(QWidget *parent = nullptr);
     ~TicketSystem();
 
+
 private slots:
+    void on_logged(bool logged);
 
     void on_actionQuit_triggered();
 
@@ -33,6 +35,7 @@ private:
     std::shared_ptr<UsersContainer> users_container;
     Login *loginWindow;
     Signup *signupWindow;
+    Logged *loggedWindow;
     Ui::TicketSystem *ui;
 };
 

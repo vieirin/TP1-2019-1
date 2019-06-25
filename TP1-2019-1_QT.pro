@@ -50,6 +50,7 @@ SOURCES += \
         src/entities/Ticket.cpp \
         src/entities/User.cpp \
         src/main.cpp \
+    src/presentation/logged.cpp \
     src/presentation/signup.cpp \
         src/presentation/ticketsystem.cpp \
         src/presentation/login.cpp \
@@ -82,11 +83,13 @@ HEADERS += \
         include/entities/Presentation.hpp \
         include/entities/Ticket.hpp \
         include/entities/User.hpp \
+    include/presentation/logged.hpp \
         include/presentation/signup.hpp \
         include/presentation/ticketsystem.h \
         include/presentation/login.h
 
 FORMS += \
+        forms/logged.ui \
         forms/login.ui \
         forms/signup.ui \
         forms/ticketsystem.ui

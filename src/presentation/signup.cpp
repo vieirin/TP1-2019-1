@@ -59,8 +59,17 @@ void Signup::on_confirmpasswdLabel_textChanged(const QString &conf_password)
 
 void Signup::on_okButton_clicked()
 {
+    std::shared_ptr<CreditCard> credit_card;
+    try {
+        credit_card = std::make_shared<CreditCard>(credit_card_number, cvv, expiration);
+    }catch (std::exception &e) {
+        std::string errMsg("Invalid credit card information\n ");
+        errMsg += e.what();
+        ui->errMsg->setText(errMsg.data());
+        return;
+    }
     if (passwd != "" && passwd == confirm_passwd) {
-        if(users_container->SignUp(cpf, passwd)) {
+        if(users_container->SignUp(cpf, passwd, credit_card)) {
             hasDeleteCalled = true;
             this->deleteLater();
         } else {
@@ -75,4 +84,27 @@ void Signup::on_cancelButton_clicked()
 {
     hasDeleteCalled = true;
     this->deleteLater();
+}
+
+void Signup::on_creditInput_textChanged(const QString &creditnumber)
+{
+   credit_card_number = creditnumber.toUtf8().data();
+}
+
+void Signup::on_cvvInput_textChanged(const QString &cvvnumber)
+{
+    cvv = cvvnumber.toUtf8().data();
+}
+
+void Signup::on_expirationInput_cursorPositionChanged(int oldPos, int newPos)
+{
+    if (newPos == 2) {
+        expiration += '/';
+    }
+    ui->expirationInput->setText(expiration.data());
+}
+
+void Signup::on_expirationInput_textChanged(const QString &expirationdate)
+{
+    expiration = expirationdate.toUtf8().data();
 }

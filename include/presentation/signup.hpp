@@ -3,7 +3,7 @@
 
 #include <QWidget>
 #include <ServiceContainers/userscontainer.hpp>
-
+#include <entities/CreditCard.hpp>
 namespace Ui {
 class Signup;
 }
@@ -29,6 +29,14 @@ private slots:
 
     void on_cancelButton_clicked();
 
+    void on_creditInput_textChanged(const QString &arg1);
+
+    void on_cvvInput_textChanged(const QString &arg1);
+
+    void on_expirationInput_cursorPositionChanged(int arg1, int arg2);
+
+    void on_expirationInput_textChanged(const QString &arg1);
+
 private:
     bool hasDeleteCalled;
     std::shared_ptr<UsersContainer> users_container;
@@ -36,6 +44,9 @@ private:
     std::string cpf;
     std::string passwd;
     std::string confirm_passwd;
+    std::string credit_card_number;
+    std::string cvv;
+    std::string expiration;
 };
 
 

@@ -60,12 +60,12 @@ void Login::on_okButton_clicked()
 {
     if(users_container->SignIn(cpf, passwd)){
         //go back to previous screen
+        emit logged(true);
         this->deleteLater();
     } else {
         QString errMsg = "Could not login, check your credentials";
         ui->errorMsg->setText(errMsg);
     }
-
 }
 
 void Login::on_cancelButton_clicked()

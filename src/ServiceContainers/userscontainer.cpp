@@ -15,9 +15,9 @@ bool UsersContainer::Delete(std::string cpf) {
     return true;
 }
 
-bool UsersContainer::SignUp(std::string cpfNumber, std::string pwd) {
+bool UsersContainer::SignUp(std::string cpfNumber, std::string pwd, std::shared_ptr<CreditCard> credit_card) {
     try {
-        auto user = std::make_shared<User>(cpfNumber, pwd);
+        auto user = std::make_shared<User>(cpfNumber, pwd, credit_card);
         user_pool[cpfNumber] = user;
     } catch (std::exception &e) {
         std::cerr << e.what();

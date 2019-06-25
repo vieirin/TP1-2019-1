@@ -36,7 +36,7 @@ namespace ServiceInterface {
     class IUser {
       public:
         virtual bool Delete(std::string cpf)                  = 0;
-        virtual bool SignUp(std::string cpf, std::string pwd) = 0;
+        virtual bool SignUp(std::string cpf, std::string pwd, std::shared_ptr<CreditCard> credit_card) = 0;
         virtual std::shared_ptr<User> Search(std::string cpf) = 0;
         virtual bool SignIn(std::string cpf, std::string pwd) = 0;
         virtual std::string LoggedUser() = 0;
