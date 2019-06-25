@@ -13,7 +13,7 @@ file (GLOB_RECURSE DOMAINS_SOURCE_FILES ${SOURCE_DIR}/domains/*.cpp)
 file (GLOB_RECURSE ENTITIES_SOURCE_FILES ${SOURCE_DIR}/entities/*.cpp)
 
 # Executable name
-add_executable (PassManager ${SOURCE_DIR}/main.cpp
+add_executable (PassManager ${SOURCE_DIR}/
                             ${DOMAINS_SOURCE_FILES}
 )
 target_include_directories(PassManager PUBLIC ${INCLUDE_DIR})

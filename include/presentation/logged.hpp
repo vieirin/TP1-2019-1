@@ -24,6 +24,8 @@ private slots:
 
     void on_createPresentation_clicked();
 
+    void on_enrollEvent_clicked(bool checked);
+
 private:
     Ui::Logged *ui;
 };

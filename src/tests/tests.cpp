@@ -12,6 +12,7 @@
 #include <domains/tests/Price_test.hpp>
 #include <domains/tests/Room_test.hpp>
 #include <domains/tests/SecureCode_test.hpp>
+#include <domains/tests/StartTime_test.hpp>
 #include <domains/tests/State_test.hpp>
 #include <domains/tests/TicketCode_test.hpp>
 #include <domains/tests/ValidDate_test.hpp>
