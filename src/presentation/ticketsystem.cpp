@@ -17,7 +17,6 @@ TicketSystem::~TicketSystem()
     delete ui;
 }
 
-
 void TicketSystem::on_actionQuit_triggered()
 {
    exit(0);
