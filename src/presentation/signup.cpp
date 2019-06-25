@@ -70,6 +70,7 @@ void Signup::on_okButton_clicked()
     }
     if (passwd != "" && passwd == confirm_passwd) {
         if(users_container->SignUp(cpf, passwd, credit_card)) {
+            emit signup(cpf);
             hasDeleteCalled = true;
             this->deleteLater();
         } else {

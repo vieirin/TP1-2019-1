@@ -12,3 +12,13 @@ Logged::~Logged()
 {
     delete ui;
 }
+
+void Logged::on_logout_clicked()
+{
+    emit logout();
+}
+
+void Logged::on_enrollEvent_clicked()
+{
+    emit enroll();
+}

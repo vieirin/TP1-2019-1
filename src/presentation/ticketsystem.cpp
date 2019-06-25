@@ -10,6 +10,8 @@ TicketSystem::TicketSystem(QWidget *parent) :
     loginWindow = nullptr;
     signupWindow = nullptr;
     loggedWindow = nullptr;
+    logonOkWindow = nullptr;
+    enrollEventWindow = nullptr;
     users_container = std::make_shared<UsersContainer>();
 }
 
@@ -38,7 +40,7 @@ void TicketSystem::on_login_clicked()
     ui->stackedWidget->addWidget(loginWindow);
     loginWindowIdx = ui->stackedWidget->indexOf(loginWindow);
     ui->stackedWidget->setCurrentIndex(loginWindowIdx);
-    this->connect(loginWindow, SIGNAL(loginWindow->logged(bool)), this, SLOT(on_logged(bool)));
+    this->connect(loginWindow, SIGNAL(logged(bool)), this, SLOT(on_logged(bool)));
 }
 
 
@@ -63,6 +65,8 @@ void TicketSystem::on_signup_clicked()
     ui->stackedWidget->addWidget(signupWindow);
     signupWindowIdx = ui->stackedWidget->indexOf(signupWindow);
     ui->stackedWidget->setCurrentIndex(signupWindowIdx);
+    this->resize(signupWindow->width()+30,signupWindow->height()+80);
+    this->connect(signupWindow, SIGNAL(signup(std::string)), this, SLOT(on_signup(std::string)));
 }
 
 void TicketSystem::on_logged(bool logged) {
@@ -77,5 +81,40 @@ void TicketSystem::on_logged(bool logged) {
         ui->stackedWidget->addWidget(loggedWindow);
         loggedWindowIdx = ui->stackedWidget->indexOf(loggedWindow);
         ui->stackedWidget->setCurrentIndex(loggedWindowIdx);
+        this->connect(loggedWindow, SIGNAL(logout()), this, SLOT(on_logout()));
+        connect(loggedWindow, SIGNAL(enroll()), this, SLOT(enroll_event()));
     }
 }
+
+void TicketSystem::on_logout() {
+    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->removeWidget(loggedWindow);
+}
+
+void TicketSystem::on_signup(std::string cpf) {
+    int logonokIdx = 0;
+    if (logonOkWindow != nullptr) {
+        logonokIdx = ui->stackedWidget->indexOf(logonOkWindow);
+        if (logonokIdx != -1)
+            ui->stackedWidget->removeWidget(logonOkWindow);
+    }
+    logonOkWindow = new Receipt(this, cpf);
+    ui->stackedWidget->addWidget(logonOkWindow);
+    logonokIdx = ui->stackedWidget->indexOf(logonOkWindow);
+    ui->stackedWidget->setCurrentIndex(logonokIdx);
+}
+
+void TicketSystem::enroll_event() {
+    ui->stackedWidget->removeWidget(loggedWindow);
+    int enrollIdx = 0;
+    if (enrollEventWindow != nullptr) {
+        enrollIdx = ui->stackedWidget->indexOf(enrollEventWindow);
+        if (enrollIdx != -1)
+            ui->stackedWidget->removeWidget(enrollEventWindow);
+    }
+    enrollEventWindow = new EnrollEvent(this);
+    ui->stackedWidget->addWidget(enrollEventWindow);
+    enrollIdx = ui->stackedWidget->indexOf(enrollEventWindow);
+    ui->stackedWidget->setCurrentIndex(enrollIdx);
+}
+
