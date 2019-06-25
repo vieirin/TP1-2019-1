@@ -8,6 +8,9 @@
 #include <presentation/logged.hpp>
 #include <presentation/receipt.hpp>
 #include <presentation/enrollevent.h>
+#include <presentation/createpresentation.hpp>
+#include <ServiceContainers/presentationscontainer.hpp>
+#include <ServiceContainers/eventscontainer.h>
 
 namespace Ui {
 class TicketSystem;
@@ -31,6 +34,8 @@ private slots:
 
     void enroll_event();
 
+    void enroll_presentation();
+
     void on_actionQuit_triggered();
 
     void on_login_clicked();
@@ -41,14 +46,16 @@ private slots:
 
 private:
     std::shared_ptr<UsersContainer> users_container;
-    Login *loginWindow;
+    std::shared_ptr<PresentationsContainer> presentations_container;
+    std::shared_ptr<EventContainer> events_container;
 
+    Login *loginWindow;
     Signup *signupWindow;
     Receipt *logonOkWindow;
-
     Logged *loggedWindow;
-
+    CreatePresentation *createPresentationWindow;
     EnrollEvent *enrollEventWindow;
+
     Ui::TicketSystem *ui;
 };
 

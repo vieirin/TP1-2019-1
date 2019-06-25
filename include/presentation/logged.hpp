@@ -15,10 +15,14 @@ public:
 signals:
     void logout();
     void enroll();
+    void enrollPresentation();
+
 private slots:
     void on_logout_clicked();
 
     void on_enrollEvent_clicked();
+
+    void on_createPresentation_clicked();
 
 private:
     Ui::Logged *ui;

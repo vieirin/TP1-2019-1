@@ -7,13 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>285</width>
-    <height>429</height>
+    <height>542</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -47,7 +47,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_2"/>
+       <widget class="QLineEdit" name="eventNameInput"/>
       </item>
      </layout>
     </item>
@@ -61,7 +61,157 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_3"/>
+       <widget class="QLineEdit" name="eventCity"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Estado do Evento  </string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox_3">
+        <item>
+         <property name="text">
+          <string>AC</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>AL</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>AP</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>AM</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>BA</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>CE</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>DF</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ES</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>GO</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>MA</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>MT</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>MS</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>MG</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>PA</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>PB</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>PR</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>PE</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>PI</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>RJ</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>RN</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>RS</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>RO</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>RR</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>SC</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>SP</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>SE</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>TO</string>
+         </property>
+        </item>
+       </widget>
       </item>
      </layout>
     </item>
@@ -75,7 +225,46 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_4"/>
+       <widget class="QComboBox" name="eventTypeCombo">
+        <item>
+         <property name="text">
+          <string>TEATRO</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ESPORTE</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>SHOW NACIONAL</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>SHOW INTERNACIONAL</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>Cod. Apresentação</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="presCodesInput">
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Códigos de apresentação separados por virgula&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -89,105 +278,71 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_5"/>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_6">
-      <item>
-       <widget class="QLabel" name="label_6">
-        <property name="text">
-         <string>Código de Apres.  </string>
-        </property>
+       <widget class="QComboBox" name="ageGroupCombo">
+        <item>
+         <property name="text">
+          <string>L</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>10</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>12</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>14</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>16</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>18</string>
+         </property>
+        </item>
        </widget>
       </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_6"/>
-      </item>
      </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_7">
-      <item>
-       <widget class="QLabel" name="label_7">
-        <property name="text">
-         <string>Data de Apres.      </string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_7"/>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_8">
-      <item>
-       <widget class="QLabel" name="label_8">
-        <property name="text">
-         <string>Inicio</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QTimeEdit" name="timeEdit"/>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_9">
-      <item>
-       <widget class="QLabel" name="label_9">
-        <property name="text">
-         <string>Fim</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QTimeEdit" name="timeEdit_2"/>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_10">
-      <item>
-       <widget class="QLabel" name="label_10">
-        <property name="text">
-         <string>Preço                     </string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_10"/>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_11">
-      <item>
-       <widget class="QLabel" name="label_11">
-        <property name="text">
-         <string>Numero da Sala  </string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_11"/>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <widget class="QDialogButtonBox" name="buttonBox">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="standardButtons">
-       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-      </property>
-     </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>500</y>
+     <width>241</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="errMsg">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>450</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
   </widget>
  </widget>
  <resources/>

@@ -6,8 +6,9 @@
 #include <domains/EventName.hpp>
 #include <domains/EventType.hpp>
 #include <domains/State.hpp>
-
+#include <entities/Presentation.hpp>
 #include <string>
+#include <list>
 
 /** Event defines an event in thetfg system */
 class Event {
@@ -18,10 +19,10 @@ class Event {
     EventType *type;
     City *city;
     State *state;
-
+    std::list<std::shared_ptr<Presentation>> presentation_list;
   public:
-    Event(std::string age, std::string code, std::string name, std::string type,
-          std::string city, std::string state);
+    Event(std::string code, std::string age, std::string name, std::string type,
+          std::string city, std::string state, std::list<std::shared_ptr<Presentation>> presentation_list);
 };
 
 #endif

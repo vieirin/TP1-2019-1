@@ -25,6 +25,7 @@ INCLUDEPATH += "include/"
 CONFIG += c++11
 
 SOURCES += \
+    src/ServiceContainers/eventscontainer.cpp \
     src/ServiceContainers/userscontainer.cpp \
         src/domains/ActualDate.cpp \
         src/domains/AgeGroup.cpp \
@@ -50,15 +51,19 @@ SOURCES += \
         src/entities/Ticket.cpp \
         src/entities/User.cpp \
         src/main.cpp \
-    src/presentation/logged.cpp \
-    src/presentation/receipt.cpp \
-    src/presentation/signup.cpp \
-    src/presentation/enrollevent.cpp \
+        src/presentation/createpresentation.cpp \
+        src/presentation/logged.cpp \
+        src/ServiceContainers/presentationscontainer.cpp \
+        src/presentation/receipt.cpp \
+        src/presentation/signup.cpp \
+        src/presentation/enrollevent.cpp \
         src/presentation/ticketsystem.cpp \
         src/presentation/login.cpp \
 
 HEADERS += \
     include/PresentationInterface.h \
+    include/ServiceContainers/eventscontainer.h \
+    include/ServiceContainers/presentationscontainer.hpp \
     include/ServiceContainers/userscontainer.hpp \
     include/ServiceInterface.h \
         include/domains/ActualDate.hpp \
@@ -85,14 +90,16 @@ HEADERS += \
         include/entities/Presentation.hpp \
         include/entities/Ticket.hpp \
         include/entities/User.hpp \
-    include/presentation/enrollevent.h \
-    include/presentation/logged.hpp \
-    include/presentation/receipt.hpp \
+        include/presentation/createpresentation.hpp \
+        include/presentation/enrollevent.h \
+        include/presentation/logged.hpp \
+        include/presentation/receipt.hpp \
         include/presentation/signup.hpp \
         include/presentation/ticketsystem.h \
         include/presentation/login.h
 
 FORMS += \
+        forms/createpresentation.ui \
         forms/enrollevent.ui \
         forms/logged.ui \
         forms/login.ui \
