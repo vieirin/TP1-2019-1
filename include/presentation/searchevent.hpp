@@ -1,0 +1,4 @@
+#ifndef SEARCHEVENT_HPP
+#define SEARCHEVENT_HPP
+
+#endif // SEARCHEVENT_HPP

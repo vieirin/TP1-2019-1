@@ -1,0 +1,4 @@
+#ifndef SEARCHRESULT_HPP
+#define SEARCHRESULT_HPP
+
+#endif // SEARCHRESULT_HPP
