@@ -10,6 +10,7 @@ TicketSystem::TicketSystem(QWidget *parent) :
     loginWindow = nullptr;
     signupWindow = nullptr;
     loggedWindow = nullptr;
+    searcheventWindow = nullptr;
     logonOkWindow = nullptr;
     enrollEventWindow = nullptr;
     users_container = std::make_shared<UsersContainer>();
@@ -40,7 +41,7 @@ void TicketSystem::on_login_clicked()
     ui->stackedWidget->addWidget(loginWindow);
     loginWindowIdx = ui->stackedWidget->indexOf(loginWindow);
     ui->stackedWidget->setCurrentIndex(loginWindowIdx);
-    this->connect(loginWindow, SIGNAL(logged(bool)), this, SLOT(on_logged(bool)));
+    this->connect(loginWindow   , SIGNAL(logged(bool)), this, SLOT(on_logged(bool)));
 }
 
 
@@ -117,4 +118,42 @@ void TicketSystem::enroll_event() {
     enrollIdx = ui->stackedWidget->indexOf(enrollEventWindow);
     ui->stackedWidget->setCurrentIndex(enrollIdx);
 }
+
+
+void TicketSystem::on_checkEvents_clicked()
+   {
+        int searcheventWindowIdx = 0;
+        if (searcheventWindow != nullptr) {
+            //if searchevent was already instantiated before we need to remove it from
+            //stack before showing a new one
+            searcheventWindowIdx = ui->stackedWidget->indexOf(searcheventWindow);
+            if (searcheventWindowIdx != -1) {
+                ui->stackedWidget->removeWidget(searcheventWindow);
+            }
+        }
+        searcheventWindow = new SearchEvent(this);
+        ui->stackedWidget->addWidget(searcheventWindow);
+        searcheventWindowIdx = ui->stackedWidget->indexOf(searcheventWindow);
+        ui->stackedWidget->setCurrentIndex(searcheventWindowIdx);
+        this->connect(searcheventWindow   , SIGNAL(searchUp(bool)), this, SLOT(on_searchFound(bool)));
+
+    }
+
+void TicketSystem::on_searchFound(bool found) {
+    if (found) {
+        int foundSearchWindowIdx = 0;
+        if (foundSearchWindow != nullptr) {
+            foundSearchWindowIdx = ui->stackedWidget->indexOf(foundSearchWindow);
+            if (foundSearchWindowIdx != -1)
+                ui->stackedWidget->removeWidget(foundSearchWindow);
+        }
+        foundSearchWindow = new SearchResult(this);
+        ui->stackedWidget->addWidget(foundSearchWindow);
+        foundSearchWindowIdx = ui->stackedWidget->indexOf(foundSearchWindow);
+        ui->stackedWidget->setCurrentIndex(foundSearchWindowIdx);
+        this->connect(foundSearchWindow, SIGNAL(logout()), this, SLOT(on_logout()));
+
+    }
+}
+
 

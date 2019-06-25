@@ -22,3 +22,8 @@ void Logged::on_enrollEvent_clicked()
 {
     emit enroll();
 }
+
+void Logged::on_enrollEvent_clicked(bool checked)
+{
+
+}

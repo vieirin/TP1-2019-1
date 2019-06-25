@@ -20,6 +20,8 @@ private slots:
 
     void on_enrollEvent_clicked();
 
+    void on_enrollEvent_clicked(bool checked);
+
 private:
     Ui::Logged *ui;
 };

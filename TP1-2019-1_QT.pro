@@ -52,6 +52,8 @@ SOURCES += \
         src/main.cpp \
     src/presentation/logged.cpp \
     src/presentation/receipt.cpp \
+    src/presentation/searchevent.cpp \
+    src/presentation/searchresult.cpp \
     src/presentation/signup.cpp \
     src/presentation/enrollevent.cpp \
         src/presentation/ticketsystem.cpp \
@@ -88,15 +90,23 @@ HEADERS += \
     include/presentation/enrollevent.h \
     include/presentation/logged.hpp \
     include/presentation/receipt.hpp \
+    include/presentation/searchevent.hpp \
+    include/presentation/searchresult.hpp \
         include/presentation/signup.hpp \
         include/presentation/ticketsystem.h \
         include/presentation/login.h
 
 FORMS += \
+        forms/.ui \
+        forms/deleteevent.ui \
+        forms/editevent.ui \
         forms/enrollevent.ui \
+        forms/infoevent.ui \
         forms/logged.ui \
         forms/login.ui \
         forms/receiptsignup.ui \
+        forms/searchevent.ui \
+        forms/searchresult.ui \
         forms/signup.ui \
         forms/ticketsystem.ui
 
