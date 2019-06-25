@@ -36,7 +36,8 @@ private slots:
     void on_expirationInput_cursorPositionChanged(int arg1, int arg2);
 
     void on_expirationInput_textChanged(const QString &arg1);
-
+signals:
+    void signup(std::string);
 private:
     bool hasDeleteCalled;
     std::shared_ptr<UsersContainer> users_container;

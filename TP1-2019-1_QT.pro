@@ -51,7 +51,9 @@ SOURCES += \
         src/entities/User.cpp \
         src/main.cpp \
     src/presentation/logged.cpp \
+    src/presentation/receipt.cpp \
     src/presentation/signup.cpp \
+    src/presentation/enrollevent.cpp \
         src/presentation/ticketsystem.cpp \
         src/presentation/login.cpp \
 
@@ -83,14 +85,18 @@ HEADERS += \
         include/entities/Presentation.hpp \
         include/entities/Ticket.hpp \
         include/entities/User.hpp \
+    include/presentation/enrollevent.h \
     include/presentation/logged.hpp \
+    include/presentation/receipt.hpp \
         include/presentation/signup.hpp \
         include/presentation/ticketsystem.h \
         include/presentation/login.h
 
 FORMS += \
+        forms/enrollevent.ui \
         forms/logged.ui \
         forms/login.ui \
+        forms/receiptsignup.ui \
         forms/signup.ui \
         forms/ticketsystem.ui
 

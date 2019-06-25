@@ -12,6 +12,14 @@ class Logged : public QWidget
 public:
     Logged(QWidget *parent);
     ~Logged();
+signals:
+    void logout();
+    void enroll();
+private slots:
+    void on_logout_clicked();
+
+    void on_enrollEvent_clicked();
+
 private:
     Ui::Logged *ui;
 };
