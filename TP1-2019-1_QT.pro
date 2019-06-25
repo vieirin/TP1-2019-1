@@ -55,23 +55,19 @@ SOURCES += \
         src/presentation/logged.cpp \
         src/ServiceContainers/presentationscontainer.cpp \
         src/presentation/receipt.cpp \
+        src/presentation/searchevent.cpp \
+        src/presentation/searchresult.cpp \
         src/presentation/signup.cpp \
         src/presentation/enrollevent.cpp \
-    src/presentation/logged.cpp \
-    src/presentation/receipt.cpp \
-    src/presentation/searchevent.cpp \
-    src/presentation/searchresult.cpp \
-    src/presentation/signup.cpp \
-    src/presentation/enrollevent.cpp \
         src/presentation/ticketsystem.cpp \
         src/presentation/login.cpp \
 
 HEADERS += \
-    include/PresentationInterface.h \
-    include/ServiceContainers/eventscontainer.h \
-    include/ServiceContainers/presentationscontainer.hpp \
-    include/ServiceContainers/userscontainer.hpp \
-    include/ServiceInterface.h \
+        include/PresentationInterface.h \
+        include/ServiceContainers/eventscontainer.h \
+        include/ServiceContainers/presentationscontainer.hpp \
+        include/ServiceContainers/userscontainer.hpp \
+        include/ServiceInterface.h \
         include/domains/ActualDate.hpp \
         include/domains/AgeGroup.hpp \
         include/domains/Availability.hpp \
@@ -97,14 +93,11 @@ HEADERS += \
         include/entities/Ticket.hpp \
         include/entities/User.hpp \
         include/presentation/createpresentation.hpp \
-        include/presentation/enrollevent.h \
         include/presentation/logged.hpp \
         include/presentation/receipt.hpp \
-    include/presentation/enrollevent.h \
-    include/presentation/logged.hpp \
-    include/presentation/receipt.hpp \
-    include/presentation/searchevent.hpp \
-    include/presentation/searchresult.hpp \
+        include/presentation/enrollevent.h \
+        include/presentation/searchevent.hpp \
+        include/presentation/searchresult.hpp \
         include/presentation/signup.hpp \
         include/presentation/ticketsystem.h \
         include/presentation/login.h

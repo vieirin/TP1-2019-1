@@ -7,16 +7,16 @@
 
 /*User defines system's main entity*/
 class User {
-  private:
-    CPF *cpf;
-    Password *passwd;
-
-  public:
-    /** Presentation Constructor takes 2 parameter*/
-    User(std::string cpfNumber, std::string pwd);
-    ~User() {}
-    bool checkPassword(std::string password);
-    std::string getCPFNumber();
+private:
+  CPF *cpf;
+  Password *passwd;
+  std::shared_ptr<CreditCard> credit_card;
+public:
+  /** Presentation Constructor takes 2 parameter*/
+  User(std::string cpfNumber, std::string pwd, std::shared_ptr<CreditCard> credit_card);
+  ~User() {}
+  bool checkPassword(std::string password);
+  std::string getCPFNumber();
 };
 
 #endif // USER_H_

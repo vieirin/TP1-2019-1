@@ -37,6 +37,7 @@ void SearchEvent::on_dateEdit_userDateChanged(const QDate &date)
 
 void SearchEvent::on_Okaybuttom_clicked()
 {
+/*
     if(events_container->Search(datainicio,datafim,cidade,estado)){
         //go back to previous screen
         emit searchUp(true);
@@ -45,6 +46,7 @@ void SearchEvent::on_Okaybuttom_clicked()
         QString errMsg = "No matches found for event search!";
         ui->errMsg->setText(errMsg);
     }
+*/
 }
 
 
