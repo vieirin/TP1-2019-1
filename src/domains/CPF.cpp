@@ -44,7 +44,12 @@ bool CPF::isFirstDigitValid(std::string cpf) {
         sum += intDigit * multiplier;
         multiplier--;
     }
-    return (sum * 10) % 11 == firstVerificationDigit;
+    int MOD = (sum * 10) % 11;
+    if (MOD == 10) {
+        return 0 == firstVerificationDigit;
+    } else {
+        return MOD == firstVerificationDigit;
+    }
 }
 
 // Ref: https://dicasdeprogramacao.com.br/algoritmo-para-validar-cpf/
@@ -72,7 +77,12 @@ bool CPF::isSecondDigitValid(std::string cpf) {
         sum += intDigit * multiplier;
         multiplier--;
     }
-    return (sum * 10) % 11 == secondVerificationDigit;
+    int MOD = (sum * 10) % 11;
+    if (MOD == 10) {
+        return 0 == secondVerificationDigit;
+    } else {
+        return MOD == secondVerificationDigit;
+    }
 }
 
 std::string CPF::getCPF() { return this->cpf; }
