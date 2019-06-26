@@ -38,7 +38,7 @@
         <property name="geometry">
          <rect>
           <x>40</x>
-          <y>150</y>
+          <y>120</y>
           <width>168</width>
           <height>37</height>
          </rect>
@@ -51,7 +51,7 @@
         <property name="geometry">
          <rect>
           <x>40</x>
-          <y>180</y>
+          <y>150</y>
           <width>168</width>
           <height>37</height>
          </rect>
@@ -86,19 +86,6 @@
          <string/>
         </property>
        </widget>
-       <widget class="QCommandLinkButton" name="login_2">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>120</y>
-          <width>168</width>
-          <height>37</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Criar Evento</string>
-        </property>
-       </widget>
       </widget>
      </widget>
     </item>
@@ -110,7 +97,7 @@
      <x>0</x>
      <y>0</y>
      <width>259</width>
-     <height>23</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
