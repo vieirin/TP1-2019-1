@@ -27,3 +27,8 @@ void Logged::on_createPresentation_clicked()
 {
     emit enrollPresentation();
 }
+
+void Logged::on_commandLinkButton_4_clicked()
+{
+    emit unrollUser();
+}

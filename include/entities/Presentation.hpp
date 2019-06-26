@@ -30,6 +30,7 @@ class Presentation {
      * */
     Presentation(int amount, std::string code, float price, int room,
                  std::string date, std::string time);
+    std::string GetPresentationDate();
 };
 
 #endif

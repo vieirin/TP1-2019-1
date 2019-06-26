@@ -9,3 +9,8 @@ Presentation::Presentation(int amount, std::string code, float price, int room,
     this->date   = new ActualDate(date);
     this->time   = new StartTime(time);
 }
+
+
+std::string Presentation::GetPresentationDate() {
+    return this->time->getStartTime();
+}

@@ -55,6 +55,7 @@ SOURCES += \
         src/presentation/logged.cpp \
         src/ServiceContainers/presentationscontainer.cpp \
         src/presentation/receipt.cpp \
+    src/presentation/resultinfo.cpp \
         src/presentation/searchevent.cpp \
         src/presentation/searchresult.cpp \
         src/presentation/signup.cpp \
@@ -96,6 +97,7 @@ HEADERS += \
         include/presentation/logged.hpp \
         include/presentation/receipt.hpp \
         include/presentation/enrollevent.h \
+        include/presentation/resultinfo.h \
         include/presentation/searchevent.hpp \
         include/presentation/searchresult.hpp \
         include/presentation/signup.hpp \
@@ -111,6 +113,7 @@ FORMS += \
         forms/logged.ui \
         forms/login.ui \
         forms/receiptsignup.ui \
+        forms/resultinfo.ui \
         forms/searchevent.ui \
         forms/searchresult.ui \
         forms/signup.ui \

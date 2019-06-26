@@ -24,6 +24,7 @@ class EventType {
     EventType(std::string type);
     void setEventType(std::string type);
     int getEventType();
+    std::string getEventTypeName();
 };
 
 #endif

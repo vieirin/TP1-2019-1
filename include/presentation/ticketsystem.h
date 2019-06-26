@@ -30,7 +30,7 @@ public:
 private slots:
     void on_logged(bool logged);
 
-    void on_searchFound(bool found);
+    void on_searchFound(std::list<std::shared_ptr<Event>>);
 
     void on_signup(std::string);
 
@@ -49,6 +49,8 @@ private slots:
     void on_signup_clicked();
 
     void on_checkEvents_clicked();
+
+    void on_unroll();
 
 private:
     std::shared_ptr<UsersContainer> users_container;

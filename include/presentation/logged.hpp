@@ -16,7 +16,7 @@ signals:
     void logout();
     void enroll();
     void enrollPresentation();
-
+    void unrollUser();
 private slots:
     void on_logout_clicked();
 
@@ -24,6 +24,8 @@ private slots:
 
     void on_createPresentation_clicked();
 
+
+    void on_commandLinkButton_4_clicked();
 
 private:
     Ui::Logged *ui;

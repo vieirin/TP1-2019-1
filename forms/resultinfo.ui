@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ResultInfo</class>
+ <widget class="QWidget" name="ResultInfo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>210</width>
+    <height>130</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>192</width>
+     <height>92</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="nameLabel">
+      <property name="text">
+       <string>Nome do Evento %s</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="typeLabel">
+      <property name="text">
+       <string>Tipo do Evento: %s</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="startDate">
+      <property name="text">
+       <string>Data de inicio do evento: %s</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="endDate">
+      <property name="text">
+       <string>Data de Termino do evento: %s</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

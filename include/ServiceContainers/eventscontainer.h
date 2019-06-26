@@ -15,7 +15,7 @@ public:
     EventContainer();
     bool CreateEvent(std::string code, std::string age, std::string name, std::string type,
                      std::string city, std::string state, std::list<std::shared_ptr<Presentation>> NumberofPresentations);
-    bool GetEventsFromTime(StartTime inicio, StartTime fim, City city, State state){}
+    std::list<std::shared_ptr<Event>> GetEventsFromTime(std::string inicio, std::string fim, std::string city, std::string state);
     bool ModifyEvent(std::string code){}
     bool DeleteEvent(std::string code){}
     bool showMyEvents(){}

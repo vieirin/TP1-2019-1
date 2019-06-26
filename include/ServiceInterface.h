@@ -47,7 +47,7 @@ namespace ServiceInterface {
       public:
         virtual bool CreateEvent(std::string code, std::string age, std::string name, std::string type,
                                  std::string city, std::string state, std::list<std::shared_ptr<Presentation> > NumberofPresentations)    = 0;
-        virtual bool GetEventsFromTime(StartTime inicio, StartTime fim, City city, State state)     = 0;
+        virtual std::list<std::shared_ptr<Event>> GetEventsFromTime(std::string inicio, std::string fim, std::string city, std::string state)     = 0;
         virtual bool ModifyEvent(std::string code)                                   = 0;
         virtual bool DeleteEvent(std::string code)                                   = 0;
         virtual bool showMyEvents()                       = 0;

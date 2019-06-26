@@ -29,7 +29,7 @@
   <widget class="QPushButton" name="Okaybuttom">
    <property name="geometry">
     <rect>
-     <x>210</x>
+     <x>140</x>
      <y>250</y>
      <width>71</width>
      <height>21</height>
@@ -42,7 +42,7 @@
   <widget class="QPushButton" name="cancelButton">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>220</x>
      <y>250</y>
      <width>81</width>
      <height>21</height>
@@ -65,13 +65,13 @@
     <string/>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>40</x>
      <y>100</y>
      <width>267</width>
-     <height>130</height>
+     <height>134</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -111,7 +111,7 @@
       <item>
        <widget class="QLabel" name="label_5">
         <property name="text">
-         <string>Cidade:                   </string>
+         <string>Cidade:                         </string>
         </property>
        </widget>
       </item>
@@ -127,17 +127,149 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_4">
       <item>
-       <widget class="QLabel" name="label_4">
+       <widget class="QLabel" name="label_6">
         <property name="text">
-         <string>Estado:                   </string>
+         <string>Estado do Evento  </string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_4">
-        <property name="maxLength">
-         <number>2</number>
-        </property>
+       <widget class="QComboBox" name="stateCombo">
+        <item>
+         <property name="text">
+          <string>AC</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>AL</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>AP</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>AM</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>BA</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>CE</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>DF</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>ES</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>GO</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>MA</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>MT</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>MS</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>MG</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>PA</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>PB</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>PR</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>PE</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>PI</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>RJ</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>RN</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>RS</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>RO</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>RR</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>SC</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>SP</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>SE</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>TO</string>
+         </property>
+        </item>
        </widget>
       </item>
      </layout>

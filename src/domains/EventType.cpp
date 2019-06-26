@@ -9,3 +9,11 @@ void EventType::setEventType(std::string typeName) {
     this->type = evType.at(typeName);
 }
 int EventType::getEventType() { return this->type; }
+
+std::string EventType::getEventTypeName() {
+    for (auto &i : evType) {
+        if (type == i.second) {
+            return i.first;
+        }
+    }
+}

@@ -23,6 +23,12 @@ class Event {
   public:
     Event(std::string code, std::string age, std::string name, std::string type,
           std::string city, std::string state, std::list<std::shared_ptr<Presentation>> presentation_list);
+    bool isOnRange(std::string startDate, std::string endDate, std::string city, std::string st);
+    std::string getName() { return name->getName();}
+    std::string getType() {return type->getEventTypeName();}
+    std::string getAgeGroup() {return age->getGroup();}
+    std::list<std::shared_ptr<Presentation>> getPresentations() {return presentation_list;}
+
 };
 
 #endif

@@ -88,6 +88,7 @@ void TicketSystem::on_logged(bool logged) {
         connect(loggedWindow, SIGNAL(logout()), this, SLOT(on_logout()));
         connect(loggedWindow, SIGNAL(enroll()), this, SLOT(enroll_event()));
         connect(loggedWindow, SIGNAL(enrollPresentation()), this, SLOT(enroll_presentation()));
+        connect(loggedWindow, SIGNAL(unrollUser()), this, SLOT(on_unroll()));
     }
 }
 
@@ -147,29 +148,33 @@ void TicketSystem::on_checkEvents_clicked()
                 ui->stackedWidget->removeWidget(searcheventWindow);
             }
         }
-        searcheventWindow = new SearchEvent(this);
+        searcheventWindow = new SearchEvent(this, events_container);
         ui->stackedWidget->addWidget(searcheventWindow);
         searcheventWindowIdx = ui->stackedWidget->indexOf(searcheventWindow);
         ui->stackedWidget->setCurrentIndex(searcheventWindowIdx);
-        this->connect(searcheventWindow   , SIGNAL(searchUp(bool)), this, SLOT(on_searchFound(bool)));
-
+        this->resize(searcheventWindow->width()+100, searcheventWindow->height()+50);
+        this->connect(searcheventWindow, SIGNAL(searchUp(std::list<std::shared_ptr<Event>>)), this, SLOT(on_searchFound(std::list<std::shared_ptr<Event>>)));
     }
 
-void TicketSystem::on_searchFound(bool found) {
-    if (found) {
+void TicketSystem::on_searchFound(std::list<std::shared_ptr<Event>> events_found) {
+    if (events_found.size() > 0){
+        resize(width()-100, width()+50);
         int foundSearchWindowIdx = 0;
         if (foundSearchWindow != nullptr) {
             foundSearchWindowIdx = ui->stackedWidget->indexOf(foundSearchWindow);
             if (foundSearchWindowIdx != -1)
                 ui->stackedWidget->removeWidget(foundSearchWindow);
         }
-        foundSearchWindow = new SearchResult(this);
+        foundSearchWindow = new SearchResult(this, events_found);
         ui->stackedWidget->addWidget(foundSearchWindow);
         foundSearchWindowIdx = ui->stackedWidget->indexOf(foundSearchWindow);
         ui->stackedWidget->setCurrentIndex(foundSearchWindowIdx);
-        this->connect(foundSearchWindow, SIGNAL(logout()), this, SLOT(on_logout()));
-
+        resize(width()+60, width()+60);
     }
 }
 
-
+void TicketSystem::on_unroll() {
+    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget->removeWidget(loggedWindow);
+    users_container->Delete(users_container->LoggedUser());
+}

@@ -16,3 +16,13 @@ bool EventContainer::CreateEvent(std::string code, std::string age, std::string 
 
     return true;
 }
+
+std::list<std::shared_ptr<Event>> EventContainer::GetEventsFromTime(std::string inicio, std::string fim, std::string city, std::string state) {
+    std::list<std::shared_ptr<Event>> events_found;
+    for (auto event : event_pool) {
+        if (event.second->isOnRange(inicio, fim, city, state)){
+            events_found.push_back(event.second);
+        }
+    }
+    return events_found;
+}
